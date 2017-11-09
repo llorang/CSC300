@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AlcoholMaker
 {
-    public class Ale
+    public class Ale : Beer
     {
         //public override string Method
         //{

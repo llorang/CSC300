@@ -12,17 +12,7 @@ namespace AlcoholMaker
          KeyValuePair<double, string> UpperTempRange;
         //KeyValuePair<double, double> keyValue = new KeyValuePair<double, double>("string", 1);
 
-        public string Name
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public string Name{get;set;}
 
         public virtual string Type
         {
@@ -96,21 +86,19 @@ namespace AlcoholMaker
             }
         }
 
-        public FermentedProducts()
+        public double BatchVolume { get; set; }
+
+        public BrewMethod CurrentMethod = BrewMethod.Extract;
+        public enum BrewMethod { Extract, PartialMash, AllGrain, Other}
+
+        public FermentedProducts(string name)
         {
-            throw new NotImplementedException();
+            Name = name;
         }
 
-        public double BatchVolume
+        public FermentedProducts(string name,bool extract)
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            Name = name;
         }
 
         public virtual void YeastCalc()

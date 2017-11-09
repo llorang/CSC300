@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{173BCD64-694A-4DCF-85B8-10463E3E7F50}</ProjectGuid>
+    <ProjectGuid>{D80F99DC-24A5-493B-A88E-EFC3CF5C0CB3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>AlcoholMaker</RootNamespace>
-    <AssemblyName>AlcoholMaker</AssemblyName>
+    <RootNamespace>BeerMaker</RootNamespace>
+    <AssemblyName>BeerMaker</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,30 +45,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alcohol.cs" />
-    <Compile Include="Ale.cs" />
-    <Compile Include="Beer.cs" />
-    <Compile Include="FermentedProducts.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MashLauterForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MashLauterForm.Designer.cs">
-      <DependentUpon>MashLauterForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MashLauterForm.resx">
-      <DependentUpon>MashLauterForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

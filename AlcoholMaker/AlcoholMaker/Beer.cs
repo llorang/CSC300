@@ -8,6 +8,8 @@ namespace AlcoholMaker
 {
     public abstract class Beer : FermentedProducts
     {
+        public static int CurrentBatchNumber { get; private set; }
+        public static int PrevBatchNumber { get; private set; }
         const double H2OtoGrainRatio = 2.0;
         const double H2ORetentionRatio = 0.5;
         double PreBoilGrav;
