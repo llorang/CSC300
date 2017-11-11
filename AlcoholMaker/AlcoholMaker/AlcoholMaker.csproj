@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Alcohol.cs" />
     <Compile Include="Ale.cs" />
+    <Compile Include="BarleyWine.cs" />
     <Compile Include="Beer.cs" />
     <Compile Include="FermentedProducts.cs" />
     <Compile Include="Form1.cs">
@@ -55,6 +56,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lager.cs" />
     <Compile Include="MashLauterForm.cs">
       <SubType>Form</SubType>
     </Compile>

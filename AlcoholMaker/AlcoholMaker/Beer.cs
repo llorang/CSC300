@@ -8,6 +8,9 @@ namespace AlcoholMaker
 {
     public abstract class Beer : FermentedProducts
     {
+        protected override string _productType { get { return "Beer"; } }
+        protected virtual string _beerType { get { return "Generic Beer"; } }
+
         public static int CurrentBatchNumber { get; private set; }
         public static int PrevBatchNumber { get; private set; }
         const double H2OtoGrainRatio = 2.0;
@@ -39,7 +42,7 @@ namespace AlcoholMaker
             }
         }
 
-        protected Beer()
+        public Beer(string name, double batchvolume, BrewMethod brewMethod) : base(name, batchvolume, brewMethod)
         {
             throw new NotImplementedException();
         }

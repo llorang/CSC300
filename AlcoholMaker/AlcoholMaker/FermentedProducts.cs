@@ -4,6 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+struct RangePair{
+    public double lower;
+    public double upper;
+};
+
 namespace AlcoholMaker
 {
     public abstract class FermentedProducts : Alcohol
@@ -13,30 +18,11 @@ namespace AlcoholMaker
         //KeyValuePair<double, double> keyValue = new KeyValuePair<double, double>("string", 1);
 
         public string Name{get;set;}
+        public double BatchVolume { get; set; }
 
-        public virtual string Type
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        protected virtual string _productType {get { return "Fermented Product"; }}
 
-        public virtual string Method
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+
 
         public double OG
         {
@@ -86,19 +72,23 @@ namespace AlcoholMaker
             }
         }
 
-        public double BatchVolume { get; set; }
 
-        public BrewMethod CurrentMethod = BrewMethod.Extract;
+
+        public BrewMethod CurrentMethod;
         public enum BrewMethod { Extract, PartialMash, AllGrain, Other}
 
-        public FermentedProducts(string name)
+        //Constructor for cider, mead & wine
+        public FermentedProducts(string name, double BatchVolume)
         {
             Name = name;
         }
 
-        public FermentedProducts(string name,bool extract)
+        //Constructor for beer requires multiple brewing methods
+        public FermentedProducts(string name, double batchVolume, BrewMethod brewMethod)
         {
             Name = name;
+            BatchVolume = batchVolume;
+            CurrentMethod = brewMethod;
         }
 
         public virtual void YeastCalc()

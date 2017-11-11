@@ -8,6 +8,8 @@ namespace AlcoholMaker
 {
     public class Ale : Beer
     {
+        protected override string _beerType { get { return "Ale"; } }
+        public string BeerType;
         //public override string Method
         //{
         //    get
@@ -23,7 +25,7 @@ namespace AlcoholMaker
         //public override string Type
         //{
         //    get
-        //    {
+        //    {   
         //        throw new NotImplementedException();
         //    }
         //    set
@@ -31,6 +33,11 @@ namespace AlcoholMaker
         //        throw new NotImplementedException();
         //    }
         //}
+
+        public Ale(string name, double batchvolume, BrewMethod brewMethod) : base(name, batchvolume, brewMethod)
+        {
+            BeerType = _beerType;
+        }
     }
 
 

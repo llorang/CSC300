@@ -5,10 +5,14 @@ namespace AlcoholMaker
 {
     public partial class MainForm : Form
     {
-        public MainForm()
-        {
-            InitializeComponent();
-        }
+        private string BeerType_tmp { get; set; }
+        private string BatchName_tmp { get; set; }
+        private string BatchVolume_tmp { get; set; }
+        private string BrewMethod_tmp { get; set; }
+
+        private RangePair OG = new RangePair();
+
+        public MainForm() => InitializeComponent();
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -59,6 +63,51 @@ namespace AlcoholMaker
         {
             MashLauterForm mashLauterForm = new MashLauterForm();
             mashLauterForm.Show();
+        }
+
+        private void AcceptBatchID_btn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BeerType_btn_Click(object sender, EventArgs e)
+        {
+            BeerType_tmp = BeerType_cbox.Text;
+            MessageBox.Show("Beer Type: \n" + BeerType_tmp);
+        }
+
+        private void BatchName_btn_Click(object sender, EventArgs e)
+        {
+            BatchName_tmp = BatchName_tbox.Text;
+            MessageBox.Show("Batch Name: \n" + BatchName_tmp);
+        }
+
+        private void BatchVolume_btn_Click(object sender, EventArgs e)
+        {
+            BatchVolume_tmp = BatchVolume_cbox.Text;
+            MessageBox.Show("Batch Volume: \n" + BatchVolume_tmp);
+        }
+
+        private void BrewMethod_btn_Click(object sender, EventArgs e)
+        {
+            BrewMethod_tmp = BrewMethod_cbox.SelectedItem.ToString();
+            MessageBox.Show("Brewing Method: \n" + BrewMethod_tmp);
+        }
+
+        private void OGLower_cbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OG.lower = Convert.ToDouble(OGLower_cbox.SelectedItem.ToString());
+            MessageBox.Show(OGLower_cbox.SelectedItem.ToString());
+            if (OG.upper <= OG.lower)
+                MessageBox.Show("OG Lower >= OG Upper");
+        }
+
+        private void OGUpper_cbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OG.upper = Convert.ToDouble(OGUpper_cbox.SelectedItem.ToString());
+            MessageBox.Show(OGUpper_cbox.SelectedItem.ToString());
+            if (OG.upper <= OG.lower)
+                MessageBox.Show("OG Lower >= OG Upper");
         }
     }
 }
