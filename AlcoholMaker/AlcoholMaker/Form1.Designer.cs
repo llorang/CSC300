@@ -39,8 +39,6 @@
             this.BatchID_lbl = new System.Windows.Forms.Label();
             this.BatchID_txt = new System.Windows.Forms.Label();
             this.MashLauter_btn = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.GenericEquip_lbl = new System.Windows.Forms.Label();
             this.AcceptBatchID_lbl = new System.Windows.Forms.Label();
             this.AcceptBatchID_btn = new System.Windows.Forms.Button();
             this.BatchName_lbl = new System.Windows.Forms.Label();
@@ -58,6 +56,18 @@
             this.OGRange_lbl = new System.Windows.Forms.Label();
             this.OGLower_cbox = new System.Windows.Forms.ComboBox();
             this.OGUpper_cbox = new System.Windows.Forms.ComboBox();
+            this.FGUpper_cbox = new System.Windows.Forms.ComboBox();
+            this.FGLower_cbox = new System.Windows.Forms.ComboBox();
+            this.FGRange_lbl = new System.Windows.Forms.Label();
+            this.FermTempUpper_cbox = new System.Windows.Forms.ComboBox();
+            this.FermTempLower_cbox = new System.Windows.Forms.ComboBox();
+            this.FermTemp_lbl = new System.Windows.Forms.Label();
+            this.IBU_btn = new System.Windows.Forms.Button();
+            this.IBU_tbox = new System.Windows.Forms.TextBox();
+            this.IBU_lbl = new System.Windows.Forms.Label();
+            this.BrewEquipment_btn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Lbl_BatchNumber
@@ -165,7 +175,7 @@
             // MashLauter_btn
             // 
             this.MashLauter_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MashLauter_btn.Location = new System.Drawing.Point(268, 489);
+            this.MashLauter_btn.Location = new System.Drawing.Point(283, 553);
             this.MashLauter_btn.Name = "MashLauter_btn";
             this.MashLauter_btn.Size = new System.Drawing.Size(213, 29);
             this.MashLauter_btn.TabIndex = 13;
@@ -173,33 +183,11 @@
             this.MashLauter_btn.UseVisualStyleBackColor = true;
             this.MashLauter_btn.Click += new System.EventHandler(this.MashLauter_btn_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Wooden spoon",
-            "SS Bucket"});
-            this.comboBox1.Location = new System.Drawing.Point(594, 425);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(146, 24);
-            this.comboBox1.TabIndex = 14;
-            // 
-            // GenericEquip_lbl
-            // 
-            this.GenericEquip_lbl.AutoSize = true;
-            this.GenericEquip_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GenericEquip_lbl.Location = new System.Drawing.Point(591, 383);
-            this.GenericEquip_lbl.Name = "GenericEquip_lbl";
-            this.GenericEquip_lbl.Size = new System.Drawing.Size(167, 16);
-            this.GenericEquip_lbl.TabIndex = 15;
-            this.GenericEquip_lbl.Text = "Generic Equipment List";
-            // 
             // AcceptBatchID_lbl
             // 
             this.AcceptBatchID_lbl.AutoSize = true;
             this.AcceptBatchID_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AcceptBatchID_lbl.Location = new System.Drawing.Point(595, 285);
+            this.AcceptBatchID_lbl.Location = new System.Drawing.Point(257, 346);
             this.AcceptBatchID_lbl.Name = "AcceptBatchID_lbl";
             this.AcceptBatchID_lbl.Size = new System.Drawing.Size(122, 16);
             this.AcceptBatchID_lbl.TabIndex = 16;
@@ -208,7 +196,7 @@
             // AcceptBatchID_btn
             // 
             this.AcceptBatchID_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AcceptBatchID_btn.Location = new System.Drawing.Point(623, 323);
+            this.AcceptBatchID_btn.Location = new System.Drawing.Point(443, 334);
             this.AcceptBatchID_btn.Name = "AcceptBatchID_btn";
             this.AcceptBatchID_btn.Size = new System.Drawing.Size(65, 39);
             this.AcceptBatchID_btn.TabIndex = 17;
@@ -272,7 +260,7 @@
             this.BrewMethod_cbox.FormattingEnabled = true;
             this.BrewMethod_cbox.Items.AddRange(new object[] {
             "Extract",
-            "PartialMash",
+            "Partial Mash",
             "AllGrain",
             "Other"});
             this.BrewMethod_cbox.Location = new System.Drawing.Point(341, 155);
@@ -353,7 +341,7 @@
             // 
             this.OGRange_lbl.AutoSize = true;
             this.OGRange_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OGRange_lbl.Location = new System.Drawing.Point(530, 124);
+            this.OGRange_lbl.Location = new System.Drawing.Point(34, 247);
             this.OGRange_lbl.Name = "OGRange_lbl";
             this.OGRange_lbl.Size = new System.Drawing.Size(199, 16);
             this.OGRange_lbl.TabIndex = 31;
@@ -375,7 +363,7 @@
             "1.046",
             "1.048",
             "1.050"});
-            this.OGLower_cbox.Location = new System.Drawing.Point(514, 155);
+            this.OGLower_cbox.Location = new System.Drawing.Point(18, 278);
             this.OGLower_cbox.Name = "OGLower_cbox";
             this.OGLower_cbox.Size = new System.Drawing.Size(115, 24);
             this.OGLower_cbox.TabIndex = 33;
@@ -399,18 +387,209 @@
             "1.048",
             "1.050",
             "1.052"});
-            this.OGUpper_cbox.Location = new System.Drawing.Point(644, 155);
+            this.OGUpper_cbox.Location = new System.Drawing.Point(148, 278);
             this.OGUpper_cbox.Name = "OGUpper_cbox";
             this.OGUpper_cbox.Size = new System.Drawing.Size(115, 24);
             this.OGUpper_cbox.TabIndex = 35;
             this.OGUpper_cbox.Text = "Upper Range";
             this.OGUpper_cbox.SelectedIndexChanged += new System.EventHandler(this.OGUpper_cbox_SelectedIndexChanged);
             // 
+            // FGUpper_cbox
+            // 
+            this.FGUpper_cbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FGUpper_cbox.FormattingEnabled = true;
+            this.FGUpper_cbox.Items.AddRange(new object[] {
+            "1.000",
+            "1.002",
+            "1.004",
+            "1.006",
+            "1.008",
+            "1.010",
+            "1.012",
+            "1.014",
+            "1.016",
+            "1.018",
+            "1.020"});
+            this.FGUpper_cbox.Location = new System.Drawing.Point(443, 278);
+            this.FGUpper_cbox.Name = "FGUpper_cbox";
+            this.FGUpper_cbox.Size = new System.Drawing.Size(115, 24);
+            this.FGUpper_cbox.TabIndex = 38;
+            this.FGUpper_cbox.Text = "Upper Range";
+            this.FGUpper_cbox.SelectedIndexChanged += new System.EventHandler(this.FGUpper_cbox_SelectedIndexChanged);
+            // 
+            // FGLower_cbox
+            // 
+            this.FGLower_cbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FGLower_cbox.FormattingEnabled = true;
+            this.FGLower_cbox.Items.AddRange(new object[] {
+            "1.000",
+            "1.002",
+            "1.004",
+            "1.006",
+            "1.008",
+            "1.010",
+            "1.012",
+            "1.014",
+            "1.016",
+            "1.018",
+            "1.020"});
+            this.FGLower_cbox.Location = new System.Drawing.Point(313, 278);
+            this.FGLower_cbox.Name = "FGLower_cbox";
+            this.FGLower_cbox.Size = new System.Drawing.Size(115, 24);
+            this.FGLower_cbox.TabIndex = 37;
+            this.FGLower_cbox.Text = "Lower Range";
+            this.FGLower_cbox.SelectedIndexChanged += new System.EventHandler(this.FGLower_cbox_SelectedIndexChanged);
+            // 
+            // FGRange_lbl
+            // 
+            this.FGRange_lbl.AutoSize = true;
+            this.FGRange_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FGRange_lbl.Location = new System.Drawing.Point(329, 247);
+            this.FGRange_lbl.Name = "FGRange_lbl";
+            this.FGRange_lbl.Size = new System.Drawing.Size(197, 16);
+            this.FGRange_lbl.TabIndex = 36;
+            this.FGRange_lbl.Text = "FG Range (Recommended)";
+            // 
+            // FermTempUpper_cbox
+            // 
+            this.FermTempUpper_cbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FermTempUpper_cbox.FormattingEnabled = true;
+            this.FermTempUpper_cbox.Items.AddRange(new object[] {
+            "50",
+            "52",
+            "54",
+            "56",
+            "58",
+            "60",
+            "62",
+            "64",
+            "66",
+            "68",
+            "70",
+            "72",
+            "74",
+            "76",
+            "78"});
+            this.FermTempUpper_cbox.Location = new System.Drawing.Point(644, 183);
+            this.FermTempUpper_cbox.Name = "FermTempUpper_cbox";
+            this.FermTempUpper_cbox.Size = new System.Drawing.Size(115, 24);
+            this.FermTempUpper_cbox.TabIndex = 41;
+            this.FermTempUpper_cbox.Text = "Upper Range";
+            this.FermTempUpper_cbox.SelectedIndexChanged += new System.EventHandler(this.FermTempUpper_cbox_SelectedIndexChanged);
+            // 
+            // FermTempLower_cbox
+            // 
+            this.FermTempLower_cbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FermTempLower_cbox.FormattingEnabled = true;
+            this.FermTempLower_cbox.Items.AddRange(new object[] {
+            "50",
+            "52",
+            "54",
+            "56",
+            "58",
+            "60",
+            "62",
+            "64",
+            "66",
+            "68",
+            "70",
+            "72",
+            "74",
+            "76"});
+            this.FermTempLower_cbox.Location = new System.Drawing.Point(511, 182);
+            this.FermTempLower_cbox.Name = "FermTempLower_cbox";
+            this.FermTempLower_cbox.Size = new System.Drawing.Size(115, 24);
+            this.FermTempLower_cbox.TabIndex = 40;
+            this.FermTempLower_cbox.Text = "Lower Range";
+            this.FermTempLower_cbox.SelectedIndexChanged += new System.EventHandler(this.FermTempLower_cbox_SelectedIndexChanged);
+            // 
+            // FermTemp_lbl
+            // 
+            this.FermTemp_lbl.AutoSize = true;
+            this.FermTemp_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FermTemp_lbl.Location = new System.Drawing.Point(524, 126);
+            this.FermTemp_lbl.Name = "FermTemp_lbl";
+            this.FermTemp_lbl.Size = new System.Drawing.Size(191, 32);
+            this.FermTemp_lbl.TabIndex = 39;
+            this.FermTemp_lbl.Text = "Fermentation Temperature\r\nRange (deg F)";
+            // 
+            // IBU_btn
+            // 
+            this.IBU_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBU_btn.Location = new System.Drawing.Point(648, 299);
+            this.IBU_btn.Name = "IBU_btn";
+            this.IBU_btn.Size = new System.Drawing.Size(63, 23);
+            this.IBU_btn.TabIndex = 44;
+            this.IBU_btn.Text = "Submit";
+            this.IBU_btn.UseVisualStyleBackColor = true;
+            this.IBU_btn.Click += new System.EventHandler(this.IBU_btn_Click);
+            // 
+            // IBU_tbox
+            // 
+            this.IBU_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBU_tbox.Location = new System.Drawing.Point(607, 271);
+            this.IBU_tbox.Name = "IBU_tbox";
+            this.IBU_tbox.Size = new System.Drawing.Size(152, 22);
+            this.IBU_tbox.TabIndex = 43;
+            // 
+            // IBU_lbl
+            // 
+            this.IBU_lbl.AutoSize = true;
+            this.IBU_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBU_lbl.Location = new System.Drawing.Point(656, 252);
+            this.IBU_lbl.Name = "IBU_lbl";
+            this.IBU_lbl.Size = new System.Drawing.Size(41, 16);
+            this.IBU_lbl.TabIndex = 42;
+            this.IBU_lbl.Text = "IBUs";
+            // 
+            // BrewEquipment_btn
+            // 
+            this.BrewEquipment_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BrewEquipment_btn.Location = new System.Drawing.Point(319, 438);
+            this.BrewEquipment_btn.Name = "BrewEquipment_btn";
+            this.BrewEquipment_btn.Size = new System.Drawing.Size(134, 37);
+            this.BrewEquipment_btn.TabIndex = 45;
+            this.BrewEquipment_btn.Text = "Brew Equipment";
+            this.BrewEquipment_btn.UseVisualStyleBackColor = true;
+            this.BrewEquipment_btn.Click += new System.EventHandler(this.BrewEquipment_btn_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(64, 438);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 37);
+            this.button1.TabIndex = 46;
+            this.button1.Text = "Ingredients";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(578, 438);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(134, 37);
+            this.button2.TabIndex = 47;
+            this.button2.Text = "Yeast";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(38F, 73F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 540);
+            this.ClientSize = new System.Drawing.Size(771, 607);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BrewEquipment_btn);
+            this.Controls.Add(this.IBU_btn);
+            this.Controls.Add(this.IBU_tbox);
+            this.Controls.Add(this.IBU_lbl);
+            this.Controls.Add(this.FermTempUpper_cbox);
+            this.Controls.Add(this.FermTempLower_cbox);
+            this.Controls.Add(this.FermTemp_lbl);
+            this.Controls.Add(this.FGUpper_cbox);
+            this.Controls.Add(this.FGLower_cbox);
+            this.Controls.Add(this.FGRange_lbl);
             this.Controls.Add(this.OGUpper_cbox);
             this.Controls.Add(this.OGLower_cbox);
             this.Controls.Add(this.OGRange_lbl);
@@ -428,8 +607,6 @@
             this.Controls.Add(this.BatchName_lbl);
             this.Controls.Add(this.AcceptBatchID_btn);
             this.Controls.Add(this.AcceptBatchID_lbl);
-            this.Controls.Add(this.GenericEquip_lbl);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.MashLauter_btn);
             this.Controls.Add(this.BatchID_txt);
             this.Controls.Add(this.BatchID_lbl);
@@ -464,8 +641,6 @@
         private System.Windows.Forms.Label BatchID_lbl;
         private System.Windows.Forms.Label BatchID_txt;
         private System.Windows.Forms.Button MashLauter_btn;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label GenericEquip_lbl;
         private System.Windows.Forms.Label AcceptBatchID_lbl;
         private System.Windows.Forms.Button AcceptBatchID_btn;
         private System.Windows.Forms.Label BatchName_lbl;
@@ -483,6 +658,18 @@
         private System.Windows.Forms.Label OGRange_lbl;
         private System.Windows.Forms.ComboBox OGLower_cbox;
         private System.Windows.Forms.ComboBox OGUpper_cbox;
+        private System.Windows.Forms.ComboBox FGUpper_cbox;
+        private System.Windows.Forms.ComboBox FGLower_cbox;
+        private System.Windows.Forms.Label FGRange_lbl;
+        private System.Windows.Forms.ComboBox FermTempUpper_cbox;
+        private System.Windows.Forms.ComboBox FermTempLower_cbox;
+        private System.Windows.Forms.Label FermTemp_lbl;
+        private System.Windows.Forms.Button IBU_btn;
+        private System.Windows.Forms.TextBox IBU_tbox;
+        private System.Windows.Forms.Label IBU_lbl;
+        private System.Windows.Forms.Button BrewEquipment_btn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

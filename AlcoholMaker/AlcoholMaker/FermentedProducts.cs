@@ -13,11 +13,9 @@ namespace AlcoholMaker
 {
     public abstract class FermentedProducts : Alcohol
     {
-         KeyValuePair<double,string> LowerTempRange;
-         KeyValuePair<double, string> UpperTempRange;
-        //KeyValuePair<double, double> keyValue = new KeyValuePair<double, double>("string", 1);
 
-        public string Name{get;set;}
+
+        public string Name { get; set;}
         public double BatchVolume { get; set; }
 
         protected virtual string _productType {get { return "Fermented Product"; }}
@@ -78,9 +76,10 @@ namespace AlcoholMaker
         public enum BrewMethod { Extract, PartialMash, AllGrain, Other}
 
         //Constructor for cider, mead & wine
-        public FermentedProducts(string name, double BatchVolume)
+        public FermentedProducts(string name, double batchVolume)
         {
             Name = name;
+            BatchVolume = batchVolume;
         }
 
         //Constructor for beer requires multiple brewing methods

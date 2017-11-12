@@ -49,6 +49,18 @@
     <Compile Include="Ale.cs" />
     <Compile Include="BarleyWine.cs" />
     <Compile Include="Beer.cs" />
+    <Compile Include="EquipmentAllGrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EquipmentAllGrain.Designer.cs">
+      <DependentUpon>EquipmentAllGrain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentExtract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EquipmentExtract.Designer.cs">
+      <DependentUpon>EquipmentExtract.cs</DependentUpon>
+    </Compile>
     <Compile Include="FermentedProducts.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -65,6 +77,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EquipmentExtract.resx">
+      <DependentUpon>EquipmentExtract.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

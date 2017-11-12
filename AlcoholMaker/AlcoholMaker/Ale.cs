@@ -34,7 +34,7 @@ namespace AlcoholMaker
         //    }
         //}
 
-        public Ale(string name, double batchvolume, BrewMethod brewMethod) : base(name, batchvolume, brewMethod)
+        public Ale(string name, double batchvolume, BrewMethod brewMethod, double IBUs) : base(name, batchvolume, brewMethod, IBUs)
         {
             BeerType = _beerType;
         }

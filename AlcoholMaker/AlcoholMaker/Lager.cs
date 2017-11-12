@@ -10,7 +10,7 @@ namespace AlcoholMaker
     {
         protected override string _beerType { get { return "Lager"; } }
 
-        public Lager(string name, double batchvolume, BrewMethod brewMethod) : base(name, batchvolume, brewMethod)
+        public Lager(string name, double batchvolume, BrewMethod brewMethod, double IBUs) : base(name, batchvolume, brewMethod, IBUs)
         {
             throw new NotImplementedException();
         }

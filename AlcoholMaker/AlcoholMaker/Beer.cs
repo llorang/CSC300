@@ -11,12 +11,15 @@ namespace AlcoholMaker
         protected override string _productType { get { return "Beer"; } }
         protected virtual string _beerType { get { return "Generic Beer"; } }
 
+        public double IBUvalue { get; set; }
+
         public static int CurrentBatchNumber { get; private set; }
         public static int PrevBatchNumber { get; private set; }
+
         const double H2OtoGrainRatio = 2.0;
         const double H2ORetentionRatio = 0.5;
         double PreBoilGrav;
-        double IBUvalue;
+
 
         public double StrikeWaterVolume
         {
@@ -42,9 +45,9 @@ namespace AlcoholMaker
             }
         }
 
-        public Beer(string name, double batchvolume, BrewMethod brewMethod) : base(name, batchvolume, brewMethod)
+        public Beer(string name, double batchvolume, BrewMethod brewMethod, double IBUs) : base(name, batchvolume, brewMethod)
         {
-            throw new NotImplementedException();
+            IBUvalue = IBUs;
         }
 
         public void InfusionSingleRest()
