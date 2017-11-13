@@ -17,20 +17,29 @@ namespace AlcoholMaker
             InitializeComponent();
         }
 
+        private void EquipmentExtract_Load(object sender, EventArgs e)
+        {
+            listBox1.SelectionMode = SelectionMode.MultiExtended;
+        }
+
         private void Add_btn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text))
+            if (string.IsNullOrEmpty(AddItem_tbox.Text))
                 return;
-
-            listBox1.Items.Add(textBox1.Text);
-            textBox1.Clear();
-            textBox1.Focus();
+            listBox1.Items.Add(AddItem_tbox.Text);
+            AddItem_tbox.Clear();
+            AddItem_tbox.Focus();
         }
 
         private void Remove_btn_Click(object sender, EventArgs e)
         {
             if (listBox1.Items.Count > 0)
                 listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+        }
+
+        private void SaveList_btn_Click(object sender, EventArgs e)
+        {
+            Beer.BeerEquipExtractList = listBox1.SelectedItems.Cast<string>().ToList();
         }
     }
 }

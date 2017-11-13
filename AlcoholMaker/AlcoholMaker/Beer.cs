@@ -20,6 +20,8 @@ namespace AlcoholMaker
         const double H2ORetentionRatio = 0.5;
         double PreBoilGrav;
 
+        public static List<string> BeerEquipExtractList;
+        public static List<string> BeerEquipAllGrainList;
 
         public double StrikeWaterVolume
         {
@@ -48,6 +50,7 @@ namespace AlcoholMaker
         public Beer(string name, double batchvolume, BrewMethod brewMethod, double IBUs) : base(name, batchvolume, brewMethod)
         {
             IBUvalue = IBUs;
+            BeerEquipExtractList = new List<string>();
         }
 
         public void InfusionSingleRest()
