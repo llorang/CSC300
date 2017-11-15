@@ -23,6 +23,9 @@ namespace AlcoholMaker
         public static List<string> BeerEquipExtractList;
         public static List<string> BeerEquipAllGrainList;
 
+        public static List<string> BeerIngredExtractList;
+        public static List<string> BeerIngredAllGrainList;
+
         public double StrikeWaterVolume
         {
             get

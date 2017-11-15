@@ -68,6 +68,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IngredientsAllGrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngredientsAllGrain.Designer.cs">
+      <DependentUpon>IngredientsAllGrain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngredientsExtract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngredientsExtract.Designer.cs">
+      <DependentUpon>IngredientsExtract.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lager.cs" />
     <Compile Include="MashLauterForm.cs">
       <SubType>Form</SubType>
@@ -77,6 +89,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="YeastStarter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YeastStarter.Designer.cs">
+      <DependentUpon>YeastStarter.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="EquipmentAllGrain.resx">
       <DependentUpon>EquipmentAllGrain.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +103,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngredientsAllGrain.resx">
+      <DependentUpon>IngredientsAllGrain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngredientsExtract.resx">
+      <DependentUpon>IngredientsExtract.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MashLauterForm.resx">
       <DependentUpon>MashLauterForm.cs</DependentUpon>

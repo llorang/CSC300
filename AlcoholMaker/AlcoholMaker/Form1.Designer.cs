@@ -66,8 +66,11 @@
             this.IBU_tbox = new System.Windows.Forms.TextBox();
             this.IBU_lbl = new System.Windows.Forms.Label();
             this.BrewEquipment_btn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Ingredients_btn = new System.Windows.Forms.Button();
+            this.YeastStarter_btn = new System.Windows.Forms.Button();
+            this.Yeast_lbl = new System.Windows.Forms.Label();
+            this.Yeast_tbox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Lbl_BatchNumber
@@ -553,33 +556,67 @@
             this.BrewEquipment_btn.UseVisualStyleBackColor = true;
             this.BrewEquipment_btn.Click += new System.EventHandler(this.BrewEquipment_btn_Click);
             // 
-            // button1
+            // Ingredients_btn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(64, 438);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 37);
-            this.button1.TabIndex = 46;
-            this.button1.Text = "Ingredients";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Ingredients_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ingredients_btn.Location = new System.Drawing.Point(64, 438);
+            this.Ingredients_btn.Name = "Ingredients_btn";
+            this.Ingredients_btn.Size = new System.Drawing.Size(134, 37);
+            this.Ingredients_btn.TabIndex = 46;
+            this.Ingredients_btn.Text = "Ingredients";
+            this.Ingredients_btn.UseVisualStyleBackColor = true;
+            this.Ingredients_btn.Click += new System.EventHandler(this.Ingredients_btn_Click);
             // 
-            // button2
+            // YeastStarter_btn
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(578, 438);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(134, 37);
-            this.button2.TabIndex = 47;
-            this.button2.Text = "Yeast";
-            this.button2.UseVisualStyleBackColor = true;
+            this.YeastStarter_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YeastStarter_btn.Location = new System.Drawing.Point(581, 507);
+            this.YeastStarter_btn.Name = "YeastStarter_btn";
+            this.YeastStarter_btn.Size = new System.Drawing.Size(134, 37);
+            this.YeastStarter_btn.TabIndex = 47;
+            this.YeastStarter_btn.Text = "Yeast Starter";
+            this.YeastStarter_btn.UseVisualStyleBackColor = true;
+            this.YeastStarter_btn.Click += new System.EventHandler(this.YeastStarter_btn_Click);
+            // 
+            // Yeast_lbl
+            // 
+            this.Yeast_lbl.AutoSize = true;
+            this.Yeast_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Yeast_lbl.Location = new System.Drawing.Point(554, 419);
+            this.Yeast_lbl.Name = "Yeast_lbl";
+            this.Yeast_lbl.Size = new System.Drawing.Size(115, 16);
+            this.Yeast_lbl.TabIndex = 48;
+            this.Yeast_lbl.Text = "Enter yeast info";
+            // 
+            // Yeast_tbox
+            // 
+            this.Yeast_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Yeast_tbox.Location = new System.Drawing.Point(581, 438);
+            this.Yeast_tbox.Name = "Yeast_tbox";
+            this.Yeast_tbox.Size = new System.Drawing.Size(163, 22);
+            this.Yeast_tbox.TabIndex = 49;
+            this.Yeast_tbox.TextChanged += new System.EventHandler(this.Yeast_tbox_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(554, 476);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(205, 16);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "or press Yeast Starter button";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(38F, 73F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 607);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Yeast_tbox);
+            this.Controls.Add(this.Yeast_lbl);
+            this.Controls.Add(this.YeastStarter_btn);
+            this.Controls.Add(this.Ingredients_btn);
             this.Controls.Add(this.BrewEquipment_btn);
             this.Controls.Add(this.IBU_btn);
             this.Controls.Add(this.IBU_tbox);
@@ -668,8 +705,11 @@
         private System.Windows.Forms.TextBox IBU_tbox;
         private System.Windows.Forms.Label IBU_lbl;
         private System.Windows.Forms.Button BrewEquipment_btn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Ingredients_btn;
+        private System.Windows.Forms.Button YeastStarter_btn;
+        private System.Windows.Forms.Label Yeast_lbl;
+        private System.Windows.Forms.TextBox Yeast_tbox;
+        private System.Windows.Forms.Label label1;
     }
 }
 
