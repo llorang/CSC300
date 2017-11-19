@@ -10,7 +10,7 @@ namespace AlcoholMaker
         private double BatchVolume_tmp { get; set; }
         private FermentedProducts.BrewMethod BrewMethod_tmp { get; set; }
         private double IBUvalue_tmp { get; set; }
-        private string Yeast_tmp { get; set; }
+
 
         private RangePair OG = new RangePair();
         private RangePair FG = new RangePair();
@@ -203,15 +203,10 @@ namespace AlcoholMaker
             }
         }
 
-        private void Yeast_tbox_TextChanged(object sender, EventArgs e)
+        private void Yeast_btn_Click(object sender, EventArgs e)
         {
-            Yeast_tmp = Yeast_tbox.Text;
-        }
-
-        private void YeastStarter_btn_Click(object sender, EventArgs e)
-        {
-            YeastStarter yeastStarter = new YeastStarter();
-            yeastStarter.Show();
+            Yeast yeast = new Yeast();
+            yeast.Show();
         }
 
         private void MashLauter_btn_Click(object sender, EventArgs e)

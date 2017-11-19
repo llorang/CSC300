@@ -53,7 +53,7 @@ namespace AlcoholMaker
 
         private void SaveList_btn_Click(object sender, EventArgs e)
         {
-            Beer.BeerIngredAllGrainList = listBox1.SelectedItems.Cast<string>().ToList();
+            //Beer.BeerIngredAllGrainList = listBox1.SelectedItems.Cast<string>().ToList();
         }
     }
 }
