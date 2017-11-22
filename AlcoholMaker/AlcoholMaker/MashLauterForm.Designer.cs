@@ -58,6 +58,16 @@
             this.LiquidHeight_tbox = new System.Windows.Forms.TextBox();
             this.FirstLauter_tbox = new System.Windows.Forms.TextBox();
             this.CalcLauter1_btn = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.SpargeVolume_tbox = new System.Windows.Forms.TextBox();
+            this.WortVolumeCalc_btn = new System.Windows.Forms.Button();
+            this.WortVolume_tbox = new System.Windows.Forms.TextBox();
+            this.Lauter2Height_tbox = new System.Windows.Forms.TextBox();
+            this.WortVolume_lbl = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // SingleRest_btn
@@ -125,11 +135,11 @@
             // FirstRunnings_lbl
             // 
             this.FirstRunnings_lbl.AutoSize = true;
-            this.FirstRunnings_lbl.Location = new System.Drawing.Point(580, 123);
+            this.FirstRunnings_lbl.Location = new System.Drawing.Point(547, 123);
             this.FirstRunnings_lbl.Name = "FirstRunnings_lbl";
-            this.FirstRunnings_lbl.Size = new System.Drawing.Size(123, 16);
+            this.FirstRunnings_lbl.Size = new System.Drawing.Size(201, 16);
             this.FirstRunnings_lbl.TabIndex = 6;
-            this.FirstRunnings_lbl.Text = "1st Runnings (qt)";
+            this.FirstRunnings_lbl.Text = "1st Runnings Calculated (qt)";
             // 
             // StrikeWaterVol_tbox
             // 
@@ -377,11 +387,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(614, 398);
+            this.label6.Location = new System.Drawing.Point(583, 398);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 16);
+            this.label6.Size = new System.Drawing.Size(170, 16);
             this.label6.TabIndex = 57;
-            this.label6.Text = "1st Runnings (qt)";
+            this.label6.Text = "1st Runnings Actual (qt)";
             // 
             // PotDiameter_tbox
             // 
@@ -408,7 +418,7 @@
             // 
             // CalcLauter1_btn
             // 
-            this.CalcLauter1_btn.Location = new System.Drawing.Point(486, 414);
+            this.CalcLauter1_btn.Location = new System.Drawing.Point(460, 421);
             this.CalcLauter1_btn.Name = "CalcLauter1_btn";
             this.CalcLauter1_btn.Size = new System.Drawing.Size(97, 34);
             this.CalcLauter1_btn.TabIndex = 61;
@@ -416,11 +426,109 @@
             this.CalcLauter1_btn.UseVisualStyleBackColor = true;
             this.CalcLauter1_btn.Click += new System.EventHandler(this.CalcLauter1_btn_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(14, 500);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(83, 24);
+            this.label7.TabIndex = 62;
+            this.label7.Text = "Sparge:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(128, 503);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(232, 16);
+            this.label8.TabIndex = 63;
+            this.label8.Text = "Sparge Water Temp = 173 deg F";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(411, 503);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(187, 16);
+            this.label9.TabIndex = 64;
+            this.label9.Text = "Sparge Water Volume (qt)";
+            // 
+            // SpargeVolume_tbox
+            // 
+            this.SpargeVolume_tbox.Location = new System.Drawing.Point(617, 503);
+            this.SpargeVolume_tbox.Name = "SpargeVolume_tbox";
+            this.SpargeVolume_tbox.Size = new System.Drawing.Size(113, 22);
+            this.SpargeVolume_tbox.TabIndex = 65;
+            // 
+            // WortVolumeCalc_btn
+            // 
+            this.WortVolumeCalc_btn.Location = new System.Drawing.Point(460, 599);
+            this.WortVolumeCalc_btn.Name = "WortVolumeCalc_btn";
+            this.WortVolumeCalc_btn.Size = new System.Drawing.Size(97, 34);
+            this.WortVolumeCalc_btn.TabIndex = 73;
+            this.WortVolumeCalc_btn.Text = "Calculate";
+            this.WortVolumeCalc_btn.UseVisualStyleBackColor = true;
+            this.WortVolumeCalc_btn.Click += new System.EventHandler(this.WortVolumeCalc_btn_Click);
+            // 
+            // WortVolume_tbox
+            // 
+            this.WortVolume_tbox.Location = new System.Drawing.Point(628, 605);
+            this.WortVolume_tbox.Name = "WortVolume_tbox";
+            this.WortVolume_tbox.Size = new System.Drawing.Size(84, 22);
+            this.WortVolume_tbox.TabIndex = 72;
+            // 
+            // Lauter2Height_tbox
+            // 
+            this.Lauter2Height_tbox.Location = new System.Drawing.Point(309, 605);
+            this.Lauter2Height_tbox.Name = "Lauter2Height_tbox";
+            this.Lauter2Height_tbox.Size = new System.Drawing.Size(75, 22);
+            this.Lauter2Height_tbox.TabIndex = 71;
+            this.Lauter2Height_tbox.TextChanged += new System.EventHandler(this.Lauter2Height_tbox_TextChanged);
+            // 
+            // WortVolume_lbl
+            // 
+            this.WortVolume_lbl.AutoSize = true;
+            this.WortVolume_lbl.Location = new System.Drawing.Point(614, 576);
+            this.WortVolume_lbl.Name = "WortVolume_lbl";
+            this.WortVolume_lbl.Size = new System.Drawing.Size(123, 16);
+            this.WortVolume_lbl.TabIndex = 69;
+            this.WortVolume_lbl.Text = "Wort Volume (qt)";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(275, 576);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(164, 16);
+            this.label11.TabIndex = 68;
+            this.label11.Text = "Liquid height in pot (in)";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(12, 570);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(105, 24);
+            this.label13.TabIndex = 66;
+            this.label13.Text = "Lauter (2):";
+            // 
             // MashLauterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 689);
+            this.Controls.Add(this.WortVolumeCalc_btn);
+            this.Controls.Add(this.WortVolume_tbox);
+            this.Controls.Add(this.Lauter2Height_tbox);
+            this.Controls.Add(this.WortVolume_lbl);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.SpargeVolume_tbox);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.CalcLauter1_btn);
             this.Controls.Add(this.FirstLauter_tbox);
             this.Controls.Add(this.LiquidHeight_tbox);
@@ -493,5 +601,15 @@
         private System.Windows.Forms.TextBox LiquidHeight_tbox;
         private System.Windows.Forms.TextBox FirstLauter_tbox;
         private System.Windows.Forms.Button CalcLauter1_btn;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox SpargeVolume_tbox;
+        private System.Windows.Forms.Button WortVolumeCalc_btn;
+        private System.Windows.Forms.TextBox WortVolume_tbox;
+        private System.Windows.Forms.TextBox Lauter2Height_tbox;
+        private System.Windows.Forms.Label WortVolume_lbl;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label13;
     }
 }

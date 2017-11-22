@@ -27,6 +27,7 @@ namespace AlcoholMaker
         public static int MashTime { get; set; }
         public static int MashTemp { get; set; }
         public static int StrikeTempActual { get; set; }
+        public static double WortVolume { get; set; }
         double PreBoilGrav;
 
 

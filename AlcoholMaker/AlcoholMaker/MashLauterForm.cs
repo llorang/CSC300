@@ -15,7 +15,10 @@ namespace AlcoholMaker
         private RangePair _mashTempRange = new RangePair();
         private double _potDiameter;
         private double _liquidHeight;
+        private double _firstRunningsCalculated;
         private double _firstRunnings;
+        private double _lauter2Height;
+ 
 
         public MashLauterForm()
         {
@@ -32,6 +35,7 @@ namespace AlcoholMaker
             MessageBox.Show("Fill out this form.");
             GrainBill_tbox.Text = IngredientsAllGrain.GrainTotal.ToString();
             StrikeWaterVol_tbox.Text = Convert.ToString(IngredientsAllGrain.GrainTotal * Beer.H2OtoGrainRatio);
+            _firstRunningsCalculated = IngredientsAllGrain.GrainTotal * (Beer.H2OtoGrainRatio - Beer.H2ORetentionRatio);
             FirstRunnings_tbox.Text = Convert.ToString(IngredientsAllGrain.GrainTotal * (Beer.H2OtoGrainRatio - Beer.H2ORetentionRatio));
         }
 
@@ -91,6 +95,18 @@ namespace AlcoholMaker
         {
             _firstRunnings = Math.PI * Math.Pow((_potDiameter / 2), 2) * _liquidHeight * 0.0173;   //0.0173 converts cubic inches to quarts
             FirstLauter_tbox.Text = Convert.ToString(Math.Round(_firstRunnings,2));
+            SpargeVolume_tbox.Text = Convert.ToString(_firstRunningsCalculated);        //Sparge volume = 1st runnings (calculated)
+        }
+
+        private void Lauter2Height_tbox_TextChanged(object sender, EventArgs e)
+        {
+            _lauter2Height = Convert.ToDouble(Lauter2Height_tbox.Text);
+        }
+
+        private void WortVolumeCalc_btn_Click(object sender, EventArgs e)
+        {
+            Beer.WortVolume = Math.PI * Math.Pow((_potDiameter / 2), 2) * _lauter2Height * 0.0173;   //0.0173 converts cubic inches to quarts
+            WortVolume_tbox.Text = Convert.ToString(Math.Round(Beer.WortVolume,2));
         }
     }
 }
