@@ -22,8 +22,11 @@ namespace AlcoholMaker
         public static List<string> BeerIngredExtractList;
         public static List<string> BeerIngredAllGrainList;
 
-        const double H2OtoGrainRatio = 2.0;
-        const double H2ORetentionRatio = 0.5;
+        public const double H2OtoGrainRatio = 2.0;
+        public const double H2ORetentionRatio = 0.5;
+        public static int MashTime { get; set; }
+        public static int MashTemp { get; set; }
+        public static int StrikeTempActual { get; set; }
         double PreBoilGrav;
 
 
