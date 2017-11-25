@@ -108,5 +108,11 @@ namespace AlcoholMaker
             Beer.WortVolume = Math.PI * Math.Pow((_potDiameter / 2), 2) * _lauter2Height * 0.0173;   //0.0173 converts cubic inches to quarts
             WortVolume_tbox.Text = Convert.ToString(Math.Round(Beer.WortVolume,2));
         }
+
+        private void BoilPage_btn_Click(object sender, EventArgs e)
+        {
+            BoilForm boilForm = new BoilForm();
+            boilForm.Show();
+        }
     }
 }

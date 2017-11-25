@@ -28,9 +28,9 @@ namespace AlcoholMaker
         public static int MashTemp { get; set; }
         public static int StrikeTempActual { get; set; }
         public static double WortVolume { get; set; }
-        double PreBoilGrav;
 
-
+        public static Hydrometer PreBoilGravUncorrected;
+        public static Hydrometer PreBoilGravCorrected;
 
         public double StrikeWaterVolume
         {

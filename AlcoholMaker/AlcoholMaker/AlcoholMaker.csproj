@@ -49,6 +49,12 @@
     <Compile Include="Ale.cs" />
     <Compile Include="BarleyWine.cs" />
     <Compile Include="Beer.cs" />
+    <Compile Include="BoilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoilForm.Designer.cs">
+      <DependentUpon>BoilForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EquipmentAllGrain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hydrometer.cs" />
     <Compile Include="IngredientsAllGrain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +108,9 @@
     <Compile Include="YeastStarter.Designer.cs">
       <DependentUpon>YeastStarter.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BoilForm.resx">
+      <DependentUpon>BoilForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EquipmentAllGrain.resx">
       <DependentUpon>EquipmentAllGrain.cs</DependentUpon>
     </EmbeddedResource>

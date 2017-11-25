@@ -68,16 +68,18 @@
             this.WortVolume_lbl = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.BoilPage_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SingleRest_btn
             // 
+            this.SingleRest_btn.BackColor = System.Drawing.SystemColors.ControlLight;
             this.SingleRest_btn.Location = new System.Drawing.Point(68, 35);
             this.SingleRest_btn.Name = "SingleRest_btn";
             this.SingleRest_btn.Size = new System.Drawing.Size(182, 54);
             this.SingleRest_btn.TabIndex = 0;
             this.SingleRest_btn.Text = "Single-Rest Infusion";
-            this.SingleRest_btn.UseVisualStyleBackColor = true;
+            this.SingleRest_btn.UseVisualStyleBackColor = false;
             this.SingleRest_btn.Click += new System.EventHandler(this.SingleRest_btn_Click);
             // 
             // DecoctionMash_btn
@@ -463,7 +465,7 @@
             // 
             // WortVolumeCalc_btn
             // 
-            this.WortVolumeCalc_btn.Location = new System.Drawing.Point(460, 599);
+            this.WortVolumeCalc_btn.Location = new System.Drawing.Point(363, 588);
             this.WortVolumeCalc_btn.Name = "WortVolumeCalc_btn";
             this.WortVolumeCalc_btn.Size = new System.Drawing.Size(97, 34);
             this.WortVolumeCalc_btn.TabIndex = 73;
@@ -473,14 +475,14 @@
             // 
             // WortVolume_tbox
             // 
-            this.WortVolume_tbox.Location = new System.Drawing.Point(628, 605);
+            this.WortVolume_tbox.Location = new System.Drawing.Point(531, 594);
             this.WortVolume_tbox.Name = "WortVolume_tbox";
             this.WortVolume_tbox.Size = new System.Drawing.Size(84, 22);
             this.WortVolume_tbox.TabIndex = 72;
             // 
             // Lauter2Height_tbox
             // 
-            this.Lauter2Height_tbox.Location = new System.Drawing.Point(309, 605);
+            this.Lauter2Height_tbox.Location = new System.Drawing.Point(212, 594);
             this.Lauter2Height_tbox.Name = "Lauter2Height_tbox";
             this.Lauter2Height_tbox.Size = new System.Drawing.Size(75, 22);
             this.Lauter2Height_tbox.TabIndex = 71;
@@ -489,7 +491,7 @@
             // WortVolume_lbl
             // 
             this.WortVolume_lbl.AutoSize = true;
-            this.WortVolume_lbl.Location = new System.Drawing.Point(614, 576);
+            this.WortVolume_lbl.Location = new System.Drawing.Point(517, 565);
             this.WortVolume_lbl.Name = "WortVolume_lbl";
             this.WortVolume_lbl.Size = new System.Drawing.Size(123, 16);
             this.WortVolume_lbl.TabIndex = 69;
@@ -498,7 +500,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(275, 576);
+            this.label11.Location = new System.Drawing.Point(178, 565);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(164, 16);
             this.label11.TabIndex = 68;
@@ -514,11 +516,23 @@
             this.label13.TabIndex = 66;
             this.label13.Text = "Lauter (2):";
             // 
+            // BoilPage_btn
+            // 
+            this.BoilPage_btn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BoilPage_btn.Location = new System.Drawing.Point(305, 650);
+            this.BoilPage_btn.Name = "BoilPage_btn";
+            this.BoilPage_btn.Size = new System.Drawing.Size(217, 30);
+            this.BoilPage_btn.TabIndex = 74;
+            this.BoilPage_btn.Text = "Boil Page";
+            this.BoilPage_btn.UseVisualStyleBackColor = false;
+            this.BoilPage_btn.Click += new System.EventHandler(this.BoilPage_btn_Click);
+            // 
             // MashLauterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 689);
+            this.ClientSize = new System.Drawing.Size(778, 691);
+            this.Controls.Add(this.BoilPage_btn);
             this.Controls.Add(this.WortVolumeCalc_btn);
             this.Controls.Add(this.WortVolume_tbox);
             this.Controls.Add(this.Lauter2Height_tbox);
@@ -611,5 +625,6 @@
         private System.Windows.Forms.Label WortVolume_lbl;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button BoilPage_btn;
     }
 }

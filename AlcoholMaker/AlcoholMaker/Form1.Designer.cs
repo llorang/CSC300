@@ -174,13 +174,14 @@
             // 
             // MashLauter_btn
             // 
+            this.MashLauter_btn.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.MashLauter_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MashLauter_btn.Location = new System.Drawing.Point(283, 553);
             this.MashLauter_btn.Name = "MashLauter_btn";
             this.MashLauter_btn.Size = new System.Drawing.Size(213, 29);
             this.MashLauter_btn.TabIndex = 13;
             this.MashLauter_btn.Text = "Mash/Lauter Page";
-            this.MashLauter_btn.UseVisualStyleBackColor = true;
+            this.MashLauter_btn.UseVisualStyleBackColor = false;
             this.MashLauter_btn.Click += new System.EventHandler(this.MashLauter_btn_Click);
             // 
             // AcceptBatchID_lbl
