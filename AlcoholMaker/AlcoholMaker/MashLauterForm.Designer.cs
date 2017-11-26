@@ -63,12 +63,15 @@
             this.label9 = new System.Windows.Forms.Label();
             this.SpargeVolume_tbox = new System.Windows.Forms.TextBox();
             this.WortVolumeCalc_btn = new System.Windows.Forms.Button();
-            this.WortVolume_tbox = new System.Windows.Forms.TextBox();
+            this.WortVolQts_tbox = new System.Windows.Forms.TextBox();
             this.Lauter2Height_tbox = new System.Windows.Forms.TextBox();
             this.WortVolume_lbl = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.BoilPage_btn = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.WortVolGals_tbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // SingleRest_btn
@@ -258,6 +261,7 @@
             this.StrikeTempTarget_cbox.Name = "StrikeTempTarget_cbox";
             this.StrikeTempTarget_cbox.Size = new System.Drawing.Size(147, 24);
             this.StrikeTempTarget_cbox.TabIndex = 46;
+            this.StrikeTempTarget_cbox.SelectedIndexChanged += new System.EventHandler(this.StrikeTempTarget_cbox_SelectedIndexChanged);
             // 
             // MashTime_lbl
             // 
@@ -465,7 +469,7 @@
             // 
             // WortVolumeCalc_btn
             // 
-            this.WortVolumeCalc_btn.Location = new System.Drawing.Point(363, 588);
+            this.WortVolumeCalc_btn.Location = new System.Drawing.Point(350, 588);
             this.WortVolumeCalc_btn.Name = "WortVolumeCalc_btn";
             this.WortVolumeCalc_btn.Size = new System.Drawing.Size(97, 34);
             this.WortVolumeCalc_btn.TabIndex = 73;
@@ -473,12 +477,12 @@
             this.WortVolumeCalc_btn.UseVisualStyleBackColor = true;
             this.WortVolumeCalc_btn.Click += new System.EventHandler(this.WortVolumeCalc_btn_Click);
             // 
-            // WortVolume_tbox
+            // WortVolQts_tbox
             // 
-            this.WortVolume_tbox.Location = new System.Drawing.Point(531, 594);
-            this.WortVolume_tbox.Name = "WortVolume_tbox";
-            this.WortVolume_tbox.Size = new System.Drawing.Size(84, 22);
-            this.WortVolume_tbox.TabIndex = 72;
+            this.WortVolQts_tbox.Location = new System.Drawing.Point(496, 594);
+            this.WortVolQts_tbox.Name = "WortVolQts_tbox";
+            this.WortVolQts_tbox.Size = new System.Drawing.Size(61, 22);
+            this.WortVolQts_tbox.TabIndex = 72;
             // 
             // Lauter2Height_tbox
             // 
@@ -491,11 +495,11 @@
             // WortVolume_lbl
             // 
             this.WortVolume_lbl.AutoSize = true;
-            this.WortVolume_lbl.Location = new System.Drawing.Point(517, 565);
+            this.WortVolume_lbl.Location = new System.Drawing.Point(547, 565);
             this.WortVolume_lbl.Name = "WortVolume_lbl";
-            this.WortVolume_lbl.Size = new System.Drawing.Size(123, 16);
+            this.WortVolume_lbl.Size = new System.Drawing.Size(120, 16);
             this.WortVolume_lbl.TabIndex = 69;
-            this.WortVolume_lbl.Text = "Wort Volume (qt)";
+            this.WortVolume_lbl.Text = "WORT VOLUME";
             // 
             // label11
             // 
@@ -527,14 +531,42 @@
             this.BoilPage_btn.UseVisualStyleBackColor = false;
             this.BoilPage_btn.Click += new System.EventHandler(this.BoilPage_btn_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(563, 597);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(31, 16);
+            this.label10.TabIndex = 75;
+            this.label10.Text = "(qt)";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(698, 597);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(40, 16);
+            this.label12.TabIndex = 77;
+            this.label12.Text = "(gal)";
+            // 
+            // WortVolGals_tbox
+            // 
+            this.WortVolGals_tbox.Location = new System.Drawing.Point(631, 594);
+            this.WortVolGals_tbox.Name = "WortVolGals_tbox";
+            this.WortVolGals_tbox.Size = new System.Drawing.Size(61, 22);
+            this.WortVolGals_tbox.TabIndex = 76;
+            // 
             // MashLauterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 691);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.WortVolGals_tbox);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.BoilPage_btn);
             this.Controls.Add(this.WortVolumeCalc_btn);
-            this.Controls.Add(this.WortVolume_tbox);
+            this.Controls.Add(this.WortVolQts_tbox);
             this.Controls.Add(this.Lauter2Height_tbox);
             this.Controls.Add(this.WortVolume_lbl);
             this.Controls.Add(this.label11);
@@ -620,11 +652,14 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox SpargeVolume_tbox;
         private System.Windows.Forms.Button WortVolumeCalc_btn;
-        private System.Windows.Forms.TextBox WortVolume_tbox;
+        private System.Windows.Forms.TextBox WortVolQts_tbox;
         private System.Windows.Forms.TextBox Lauter2Height_tbox;
         private System.Windows.Forms.Label WortVolume_lbl;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button BoilPage_btn;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox WortVolGals_tbox;
     }
 }

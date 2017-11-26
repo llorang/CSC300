@@ -74,7 +74,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hydrometer.cs" />
     <Compile Include="IngredientsAllGrain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +93,7 @@
     <Compile Include="MashLauterForm.Designer.cs">
       <DependentUpon>MashLauterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Measurement\Hydrometer\Hydrometer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Yeast.cs">
@@ -157,5 +157,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

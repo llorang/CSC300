@@ -26,68 +26,29 @@ namespace AlcoholMaker
         public const double H2ORetentionRatio = 0.5;
         public static int MashTime { get; set; }
         public static int MashTemp { get; set; }
+        public static double StrikeWaterVolume { get; set; }
+        public static int StrikeWaterTempTarget { get; set; }
         public static int StrikeTempActual { get; set; }
         public static double WortVolume { get; set; }
 
-        public static Hydrometer PreBoilGravUncorrected;
-        public static Hydrometer PreBoilGravCorrected;
+        public static Measurement.Hydrometer.Hydrometer PreBoilGravUncorrected;
+        public static Measurement.Hydrometer.Hydrometer PreBoilGravCorrected;
 
-        public double StrikeWaterVolume
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public double StrikeWaterTemperature
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
+        public const double PointsPerGallon = 38.0;
+        public static double ConversionEfficiency { get; set; }
+       
         public Beer(string name, double batchvolume, BrewMethod brewMethod, double IBUs) : base(name, batchvolume, brewMethod)
         {
             IBUvalue = IBUs;
             BeerEquipExtractList = new List<string>();
         }
 
-        public void InfusionSingleRest()
+        public static double ConversionEfficiencyCalc(double wortVol, double grainBill)
         {
-            throw new NotImplementedException();
+            return PointsPerGallon * (wortVol / 4.0) / grainBill;
         }
 
-        public void GrainBill()
-        {
-            throw new NotImplementedException();
-        }
-
-        public double MashRunnings()
-        {
-            throw new NotImplementedException();
-        }
-
-        public double PreBoilGravity()
-        {
-            throw new NotImplementedException();
-        }
-
-        public double ConversionEfficiency()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void IBUcalculation()
+        public void IBUCalc()
         {
             throw new NotImplementedException();
         }

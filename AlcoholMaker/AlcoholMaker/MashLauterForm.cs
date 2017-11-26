@@ -34,6 +34,7 @@ namespace AlcoholMaker
         {
             MessageBox.Show("Fill out this form.");
             GrainBill_tbox.Text = IngredientsAllGrain.GrainTotal.ToString();
+            Beer.StrikeWaterVolume = IngredientsAllGrain.GrainTotal * Beer.H2OtoGrainRatio;
             StrikeWaterVol_tbox.Text = Convert.ToString(IngredientsAllGrain.GrainTotal * Beer.H2OtoGrainRatio);
             _firstRunningsCalculated = IngredientsAllGrain.GrainTotal * (Beer.H2OtoGrainRatio - Beer.H2ORetentionRatio);
             FirstRunnings_tbox.Text = Convert.ToString(IngredientsAllGrain.GrainTotal * (Beer.H2OtoGrainRatio - Beer.H2ORetentionRatio));
@@ -64,6 +65,11 @@ namespace AlcoholMaker
             MessageBox.Show(MashTempUpper_cbox.SelectedItem.ToString());
             if (_mashTempRange.upper <= _mashTempRange.lower && _mashTempRange.upper != 0)
                 MessageBox.Show("MashTempRange Lower >= MashTempRange Upper");
+        }
+
+        private void StrikeTempTarget_cbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Beer.StrikeWaterTempTarget = Convert.ToInt16(StrikeTempTarget_cbox.SelectedItem.ToString());
         }
 
         private void MashTime_cbox_SelectedIndexChanged(object sender, EventArgs e)
@@ -106,7 +112,8 @@ namespace AlcoholMaker
         private void WortVolumeCalc_btn_Click(object sender, EventArgs e)
         {
             Beer.WortVolume = Math.PI * Math.Pow((_potDiameter / 2), 2) * _lauter2Height * 0.0173;   //0.0173 converts cubic inches to quarts
-            WortVolume_tbox.Text = Convert.ToString(Math.Round(Beer.WortVolume,2));
+            WortVolQts_tbox.Text = Convert.ToString(Math.Round(Beer.WortVolume,2));
+            WortVolGals_tbox.Text = Convert.ToString(Math.Round(Beer.WortVolume / 4.0, 2));
         }
 
         private void BoilPage_btn_Click(object sender, EventArgs e)
@@ -114,5 +121,7 @@ namespace AlcoholMaker
             BoilForm boilForm = new BoilForm();
             boilForm.Show();
         }
+
+
     }
 }
