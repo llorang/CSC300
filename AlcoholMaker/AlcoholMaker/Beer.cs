@@ -36,11 +36,18 @@ namespace AlcoholMaker
 
         public const double PointsPerGallon = 38.0;
         public static double ConversionEfficiency { get; set; }
-       
+        public static string HopVariety { get; set; }
+        public static  double HopAAU { get; set; }
+
+        public static Measurement.Hydrometer.Hydrometer PostBoilGravUncorrected;
+        public static Measurement.Hydrometer.Hydrometer PostBoilGravCorrected;
+
+
         public Beer(string name, double batchvolume, BrewMethod brewMethod, double IBUs) : base(name, batchvolume, brewMethod)
         {
             IBUvalue = IBUs;
             BeerEquipExtractList = new List<string>();
+            BeerEquipAllGrainList = new List<string>();
         }
 
         public static double ConversionEfficiencyCalc(double wortVol, double grainBill)

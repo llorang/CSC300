@@ -27,7 +27,9 @@ namespace AlcoholMaker
 
         private void MashLauterForm_Load(object sender, EventArgs e)
         {
-            
+            SingleRest_btn.Enabled = true;
+            MultiRest_btn.Enabled = false;
+            DecoctionMash_btn.Enabled = false;
         }
         #region Mash-Method Buttons
         private void SingleRest_btn_Click(object sender, EventArgs e)
