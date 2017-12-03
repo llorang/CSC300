@@ -205,6 +205,9 @@
             this.BoilTime1_cbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BoilTime1_cbox.FormattingEnabled = true;
             this.BoilTime1_cbox.Items.AddRange(new object[] {
+            "5",
+            "10",
+            "15",
             "30",
             "45",
             "60",
@@ -252,6 +255,9 @@
             this.BoilTime2_cbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BoilTime2_cbox.FormattingEnabled = true;
             this.BoilTime2_cbox.Items.AddRange(new object[] {
+            "5",
+            "10",
+            "15",
             "30",
             "45",
             "60",
@@ -361,6 +367,9 @@
             this.BoilTime3_cbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BoilTime3_cbox.FormattingEnabled = true;
             this.BoilTime3_cbox.Items.AddRange(new object[] {
+            "5",
+            "10",
+            "15",
             "30",
             "45",
             "60",
@@ -470,6 +479,9 @@
             this.BoilTime4_cbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BoilTime4_cbox.FormattingEnabled = true;
             this.BoilTime4_cbox.Items.AddRange(new object[] {
+            "5",
+            "10",
+            "15",
             "30",
             "45",
             "60",

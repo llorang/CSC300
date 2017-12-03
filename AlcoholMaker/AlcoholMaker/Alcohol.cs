@@ -8,6 +8,8 @@ namespace AlcoholMaker
 {
     public abstract class Alcohol
     {
+        public static double ABV { get; set; }
+
         public static double HydrometerValue
         {
             get
@@ -32,10 +34,6 @@ namespace AlcoholMaker
             }
         }
 
-        public static double ABV()
-        {
-            throw new NotImplementedException();
-        }
 
         public static double SpecificGravity()
         {

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace AlcoholMaker
 {
+    using Measurement.Hydrometer;
+
     public abstract class Beer : FermentedProducts
     {
         protected override string _productType { get { return "Beer"; } }
@@ -31,16 +33,21 @@ namespace AlcoholMaker
         public static int StrikeTempActual { get; set; }
         public static double WortVolume { get; set; }
 
-        public static Measurement.Hydrometer.Hydrometer PreBoilGravUncorrected;
-        public static Measurement.Hydrometer.Hydrometer PreBoilGravCorrected;
+        public static Hydrometer PreBoilGravUncorrected;
+        public static Hydrometer PreBoilGravCorrected;
 
         public const double PointsPerGallon = 38.0;
         public static double ConversionEfficiency { get; set; }
         public static string HopVariety { get; set; }
         public static  double HopAAU { get; set; }
 
-        public static Measurement.Hydrometer.Hydrometer PostBoilGravUncorrected;
-        public static Measurement.Hydrometer.Hydrometer PostBoilGravCorrected;
+        public static Hydrometer PostBoilGravUncorrected;
+        public static Hydrometer PostBoilGravCorrected;
+
+        public static Hydrometer FinalGravUncorrected;
+        public static Hydrometer FinalGravCorrected;
+
+        public static double ApparentAttenuation { get; set; }
 
 
         public Beer(string name, double batchvolume, BrewMethod brewMethod, double IBUs) : base(name, batchvolume, brewMethod)

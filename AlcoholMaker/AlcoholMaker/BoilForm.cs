@@ -3,6 +3,8 @@ using System.Windows.Forms;
 
 namespace AlcoholMaker
 {
+    using Measurement.Hydrometer;
+
     public partial class BoilForm : Form
     {
         private double _hydroReadingRaw;
@@ -29,7 +31,7 @@ namespace AlcoholMaker
 
         private void TempCorrect_btn_Click(object sender, EventArgs e)
         {
-            Beer.PreBoilGravUncorrected = new Measurement.Hydrometer.Hydrometer(_hydroReadingRaw, _hydroTempRaw);
+            Beer.PreBoilGravUncorrected = new Hydrometer(_hydroReadingRaw, _hydroTempRaw);
             Beer.PreBoilGravCorrected = Beer.PreBoilGravUncorrected.TempCorrect(60);
             PreBoilGravity_tbox.Text = Convert.ToString(Math.Round(Beer.PreBoilGravCorrected.Reading, 4));
         }
@@ -93,9 +95,15 @@ namespace AlcoholMaker
 
         private void PostBoilTempCorrect_btn_Click(object sender, EventArgs e)
         {
-            Beer.PostBoilGravUncorrected = new Measurement.Hydrometer.Hydrometer(_hydroReadingRaw, _hydroTempRaw);
+            Beer.PostBoilGravUncorrected = new Hydrometer(_hydroReadingRaw, _hydroTempRaw);
             Beer.PostBoilGravCorrected = Beer.PostBoilGravUncorrected.TempCorrect(60);
             PostBoilGravity_tbox.Text = Convert.ToString(Math.Round(Beer.PostBoilGravCorrected.Reading, 4));
+        }
+
+        private void FermBottling_btn_Click(object sender, EventArgs e)
+        {
+            FermBottlingForm fermBottlingForm = new FermBottlingForm();
+            fermBottlingForm.Show();
         }
     }
 }

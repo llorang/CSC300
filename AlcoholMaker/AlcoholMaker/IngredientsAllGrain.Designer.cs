@@ -47,7 +47,7 @@
             this.listBox1.Location = new System.Drawing.Point(403, 64);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(214, 355);
-            this.listBox1.TabIndex = 0;
+            this.listBox1.TabIndex = 2;
             // 
             // MassOfGrain_lbl
             // 
@@ -75,7 +75,7 @@
             this.MassOfGrain_tbox.Location = new System.Drawing.Point(33, 64);
             this.MassOfGrain_tbox.Name = "MassOfGrain_tbox";
             this.MassOfGrain_tbox.Size = new System.Drawing.Size(63, 22);
-            this.MassOfGrain_tbox.TabIndex = 3;
+            this.MassOfGrain_tbox.TabIndex = 0;
             // 
             // Description_tbox
             // 
@@ -83,7 +83,7 @@
             this.Description_tbox.Location = new System.Drawing.Point(137, 64);
             this.Description_tbox.Name = "Description_tbox";
             this.Description_tbox.Size = new System.Drawing.Size(196, 22);
-            this.Description_tbox.TabIndex = 4;
+            this.Description_tbox.TabIndex = 1;
             // 
             // GrainTotal_lbl
             // 

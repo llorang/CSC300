@@ -70,6 +70,7 @@
             this.ChillMethod_cbox = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.FermBottling_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -347,11 +348,9 @@
             this.IrishMoss_cbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IrishMoss_cbox.FormattingEnabled = true;
             this.IrishMoss_cbox.Items.AddRange(new object[] {
-            "25",
-            "35",
-            "50",
-            "65",
-            "80"});
+            "5",
+            "10",
+            "15"});
             this.IrishMoss_cbox.Location = new System.Drawing.Point(412, 284);
             this.IrishMoss_cbox.Name = "IrishMoss_cbox";
             this.IrishMoss_cbox.Size = new System.Drawing.Size(102, 23);
@@ -364,11 +363,9 @@
             this.YeastNutrient_cbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.YeastNutrient_cbox.FormattingEnabled = true;
             this.YeastNutrient_cbox.Items.AddRange(new object[] {
-            "25",
-            "40",
-            "55",
-            "70",
-            "85"});
+            "5",
+            "10",
+            "15"});
             this.YeastNutrient_cbox.Location = new System.Drawing.Point(644, 284);
             this.YeastNutrient_cbox.Name = "YeastNutrient_cbox";
             this.YeastNutrient_cbox.Size = new System.Drawing.Size(102, 23);
@@ -379,7 +376,7 @@
             // HopAdditions_btn
             // 
             this.HopAdditions_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HopAdditions_btn.Location = new System.Drawing.Point(266, 341);
+            this.HopAdditions_btn.Location = new System.Drawing.Point(287, 341);
             this.HopAdditions_btn.Name = "HopAdditions_btn";
             this.HopAdditions_btn.Size = new System.Drawing.Size(179, 45);
             this.HopAdditions_btn.TabIndex = 28;
@@ -390,7 +387,7 @@
             // PostBoilGravity_tbox
             // 
             this.PostBoilGravity_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PostBoilGravity_tbox.Location = new System.Drawing.Point(581, 594);
+            this.PostBoilGravity_tbox.Location = new System.Drawing.Point(581, 521);
             this.PostBoilGravity_tbox.Name = "PostBoilGravity_tbox";
             this.PostBoilGravity_tbox.Size = new System.Drawing.Size(84, 22);
             this.PostBoilGravity_tbox.TabIndex = 37;
@@ -399,7 +396,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(672, 593);
+            this.label15.Location = new System.Drawing.Point(672, 520);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(85, 16);
             this.label15.TabIndex = 36;
@@ -409,7 +406,7 @@
             // 
             this.PostBoilTempCorrect_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.PostBoilTempCorrect_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PostBoilTempCorrect_btn.Location = new System.Drawing.Point(460, 565);
+            this.PostBoilTempCorrect_btn.Location = new System.Drawing.Point(460, 492);
             this.PostBoilTempCorrect_btn.Name = "PostBoilTempCorrect_btn";
             this.PostBoilTempCorrect_btn.Size = new System.Drawing.Size(79, 59);
             this.PostBoilTempCorrect_btn.TabIndex = 35;
@@ -421,7 +418,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(334, 565);
+            this.label16.Location = new System.Drawing.Point(334, 492);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(102, 16);
             this.label16.TabIndex = 34;
@@ -429,7 +426,7 @@
             // 
             // PostBoilGravTemp_tbox
             // 
-            this.PostBoilGravTemp_tbox.Location = new System.Drawing.Point(337, 594);
+            this.PostBoilGravTemp_tbox.Location = new System.Drawing.Point(337, 521);
             this.PostBoilGravTemp_tbox.Name = "PostBoilGravTemp_tbox";
             this.PostBoilGravTemp_tbox.Size = new System.Drawing.Size(82, 20);
             this.PostBoilGravTemp_tbox.TabIndex = 33;
@@ -439,7 +436,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(292, 595);
+            this.label17.Location = new System.Drawing.Point(292, 522);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(21, 16);
             this.label17.TabIndex = 32;
@@ -470,7 +467,7 @@
             "1.038",
             "1.039",
             "1.040"});
-            this.PostBoilGravReading_cbox.Location = new System.Drawing.Point(172, 593);
+            this.PostBoilGravReading_cbox.Location = new System.Drawing.Point(172, 520);
             this.PostBoilGravReading_cbox.Name = "PostBoilGravReading_cbox";
             this.PostBoilGravReading_cbox.Size = new System.Drawing.Size(95, 21);
             this.PostBoilGravReading_cbox.TabIndex = 31;
@@ -480,7 +477,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(151, 565);
+            this.label18.Location = new System.Drawing.Point(151, 492);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(152, 16);
             this.label18.TabIndex = 30;
@@ -490,7 +487,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(12, 594);
+            this.label19.Location = new System.Drawing.Point(12, 521);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(147, 20);
             this.label19.TabIndex = 29;
@@ -500,7 +497,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(37, 463);
+            this.label20.Location = new System.Drawing.Point(55, 428);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(113, 20);
             this.label20.TabIndex = 38;
@@ -512,7 +509,7 @@
             this.ChillMethod_cbox.FormattingEnabled = true;
             this.ChillMethod_cbox.Items.AddRange(new object[] {
             "Immersion Chiller"});
-            this.ChillMethod_cbox.Location = new System.Drawing.Point(230, 463);
+            this.ChillMethod_cbox.Location = new System.Drawing.Point(248, 428);
             this.ChillMethod_cbox.Name = "ChillMethod_cbox";
             this.ChillMethod_cbox.Size = new System.Drawing.Size(249, 23);
             this.ChillMethod_cbox.TabIndex = 39;
@@ -533,17 +530,30 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(556, 565);
+            this.label22.Location = new System.Drawing.Point(556, 492);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(129, 16);
             this.label22.TabIndex = 41;
             this.label22.Text = "Wort Gravity (OG)";
+            // 
+            // FermBottling_btn
+            // 
+            this.FermBottling_btn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.FermBottling_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FermBottling_btn.Location = new System.Drawing.Point(266, 597);
+            this.FermBottling_btn.Name = "FermBottling_btn";
+            this.FermBottling_btn.Size = new System.Drawing.Size(213, 29);
+            this.FermBottling_btn.TabIndex = 42;
+            this.FermBottling_btn.Text = "Fermentation/Bottling Page";
+            this.FermBottling_btn.UseVisualStyleBackColor = false;
+            this.FermBottling_btn.Click += new System.EventHandler(this.FermBottling_btn_Click);
             // 
             // BoilForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(769, 659);
+            this.Controls.Add(this.FermBottling_btn);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.ChillMethod_cbox);
@@ -637,5 +647,6 @@
         private System.Windows.Forms.ComboBox ChillMethod_cbox;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button FermBottling_btn;
     }
 }

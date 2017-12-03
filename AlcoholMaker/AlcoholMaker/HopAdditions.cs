@@ -88,7 +88,7 @@ namespace AlcoholMaker
 
         private void Addtn2Submit_btn_Click(object sender, EventArgs e)
         {
-            var hopsAddtn2 = new GeneralBeer.Hops.Hops(_hopVariety, _hopWeight, _hopAA, _boilTime);
+            var hopsAddtn2 = new GeneralBeer.Hops.Hops(_hopVariety2, _hopWeight2, _hopAA2, _boilTime2);
             _ibuTotal += hopsAddtn2.CalculateIBU(_wortGravity, _wortVolumeGals);
             IBU_tbox.Text = Convert.ToString(Math.Round(_ibuTotal));
         }
@@ -115,7 +115,7 @@ namespace AlcoholMaker
 
         private void Addtn3Submit_btn_Click(object sender, EventArgs e)
         {
-            var hopsAddtn3 = new GeneralBeer.Hops.Hops(_hopVariety, _hopWeight, _hopAA, _boilTime);
+            var hopsAddtn3 = new GeneralBeer.Hops.Hops(_hopVariety3, _hopWeight3, _hopAA3, _boilTime3);
             _ibuTotal += hopsAddtn3.CalculateIBU(_wortGravity, _wortVolumeGals);
             IBU_tbox.Text = Convert.ToString(Math.Round(_ibuTotal));
         }
@@ -143,7 +143,7 @@ namespace AlcoholMaker
 
         private void Addtn4Submit_btn_Click(object sender, EventArgs e)
         {
-            var hopsAddtn4 = new GeneralBeer.Hops.Hops(_hopVariety, _hopWeight, _hopAA, _boilTime);
+            var hopsAddtn4 = new GeneralBeer.Hops.Hops(_hopVariety4, _hopWeight4, _hopAA4, _boilTime4);
             _ibuTotal += hopsAddtn4.CalculateIBU(_wortGravity, _wortVolumeGals);
             IBU_tbox.Text = Convert.ToString(Math.Round(_ibuTotal));
         }
