@@ -8,6 +8,9 @@ namespace AlcoholMaker.Bottling
 {
     public class Bottling
     {
-
+        public static int CalcNumberOfBottles(double batchVol, int bottleVol)
+        {
+            return (int) (batchVol * 128 / bottleVol);
+        }
     }
 }

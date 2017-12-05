@@ -17,6 +17,21 @@ namespace AlcoholMaker
     {
         private double _hydroReadingRaw;
         private int _hydroTempRaw;
+        private int _aerationTime;
+        private int _fermDay;
+        private int _fermTemp;
+
+        public int FermDay
+        {
+            get { return _fermDay; }
+            set { _fermDay = value; }
+        }
+
+        public int FermTemp
+        {
+            get { return _fermTemp; }
+            set { _fermTemp = value; }
+        }
 
         public FermBottlingForm()
         {
@@ -37,6 +52,21 @@ namespace AlcoholMaker
         private void AerationNo_btn_Click(object sender, EventArgs e)
         {
             MessageBox.Show("The yeast cells will suffocate!");
+        }
+
+        private void AerationDuration_tbox_TextChanged(object sender, EventArgs e)
+        {
+            _aerationTime = Convert.ToInt16(AerationDuration_tbox.Text);
+        }
+
+        private void NewFermList_btn_Click(object sender, EventArgs e)
+        {
+              Beer.FermTemps = new List<Fermentation.Fermentation>();
+    }
+
+        private void AddFermTemp_btn_Click(object sender, EventArgs e)
+        {
+            Beer.FermTemps.Add(new Fermentation.Fermentation() { Day = FermDay, Temp = _fermTemp });
         }
 
         private void FinalGravReading_cbox_SelectedIndexChanged(object sender, EventArgs e)
@@ -64,8 +94,31 @@ namespace AlcoholMaker
 
         private void ABV_tbox_TextChanged(object sender, EventArgs e)
         {
-            ABV_tbox.Text = Convert.ToString(Math.Round(Alcohol.ABV,3));
+            ABV_tbox.Text = Convert.ToString(Math.Round(Alcohol.ABV, 3));
             AA_tbox.Text = Convert.ToString(Math.Round(Beer.ApparentAttenuation, 3));
+        }
+
+        private void LoadBottleData_btn_Click(object sender, EventArgs e)
+        {
+            BottleType_tbox.Text = "Long Neck";
+            BottleVolume_tbox.Text = Convert.ToString("12");
+            BatchVolume_tbox.Text = FermentedProducts.BatchVolume.ToString();
+            BottlesNeeded_tbox.Text = Convert.ToString(Bottling.Bottling.CalcNumberOfBottles(FermentedProducts.BatchVolume, 12));
+        }
+
+        private void BottlesFilled_tbox_TextChanged(object sender, EventArgs e)
+        {
+            Beer.BottlesFilled = Convert.ToInt16(BottlesFilled_tbox.Text);
+        }
+
+        private void FermDay_cbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _fermDay = Convert.ToInt32(FermDay_cbox.SelectedItem.ToString());
+        }
+
+        private void FermTemp_cbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _fermTemp = Convert.ToInt32(FermDay_cbox.SelectedItem.ToString());
         }
     }
 }

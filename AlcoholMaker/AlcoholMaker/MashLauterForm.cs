@@ -56,7 +56,6 @@ namespace AlcoholMaker
         private void MashTempLower_cbox_SelectedIndexChanged(object sender, EventArgs e)
         {
             _mashTempRange.lower = Convert.ToDouble(MashTempLower_cbox.SelectedItem.ToString());
-            MessageBox.Show(MashTempLower_cbox.SelectedItem.ToString());
             if (_mashTempRange.upper <= _mashTempRange.lower && _mashTempRange.upper != 0)
                 MessageBox.Show("MashTempRange Lower >= MashTempRange Upper");
         }
@@ -64,7 +63,6 @@ namespace AlcoholMaker
         private void MashTempUpper_cbox_SelectedIndexChanged(object sender, EventArgs e)
         {
             _mashTempRange.upper = Convert.ToDouble(MashTempUpper_cbox.SelectedItem.ToString());
-            MessageBox.Show(MashTempUpper_cbox.SelectedItem.ToString());
             if (_mashTempRange.upper <= _mashTempRange.lower && _mashTempRange.upper != 0)
                 MessageBox.Show("MashTempRange Lower >= MashTempRange Upper");
         }

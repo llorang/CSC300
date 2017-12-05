@@ -48,7 +48,7 @@
             // Submit_btn
             // 
             this.Submit_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Submit_btn.Location = new System.Drawing.Point(206, 113);
+            this.Submit_btn.Location = new System.Drawing.Point(381, 67);
             this.Submit_btn.Name = "Submit_btn";
             this.Submit_btn.Size = new System.Drawing.Size(135, 35);
             this.Submit_btn.TabIndex = 12;
@@ -59,7 +59,7 @@
             // Description_tbox
             // 
             this.Description_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Description_tbox.Location = new System.Drawing.Point(112, 85);
+            this.Description_tbox.Location = new System.Drawing.Point(112, 80);
             this.Description_tbox.Name = "Description_tbox";
             this.Description_tbox.Size = new System.Drawing.Size(205, 22);
             this.Description_tbox.TabIndex = 11;
@@ -68,7 +68,7 @@
             // 
             this.Description_lbl.AutoSize = true;
             this.Description_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Description_lbl.Location = new System.Drawing.Point(109, 52);
+            this.Description_lbl.Location = new System.Drawing.Point(109, 47);
             this.Description_lbl.Name = "Description_lbl";
             this.Description_lbl.Size = new System.Drawing.Size(114, 16);
             this.Description_lbl.TabIndex = 9;
@@ -78,7 +78,7 @@
             // 
             this.YeastType_lbl.AutoSize = true;
             this.YeastType_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YeastType_lbl.Location = new System.Drawing.Point(14, 52);
+            this.YeastType_lbl.Location = new System.Drawing.Point(14, 47);
             this.YeastType_lbl.Name = "YeastType_lbl";
             this.YeastType_lbl.Size = new System.Drawing.Size(78, 16);
             this.YeastType_lbl.TabIndex = 8;
@@ -91,7 +91,7 @@
             this.YeastType_cbox.Items.AddRange(new object[] {
             "Dry",
             "Liquid"});
-            this.YeastType_cbox.Location = new System.Drawing.Point(25, 83);
+            this.YeastType_cbox.Location = new System.Drawing.Point(25, 78);
             this.YeastType_cbox.Name = "YeastType_cbox";
             this.YeastType_cbox.Size = new System.Drawing.Size(67, 24);
             this.YeastType_cbox.TabIndex = 13;
@@ -120,7 +120,7 @@
             // Yeast_tbox
             // 
             this.Yeast_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Yeast_tbox.Location = new System.Drawing.Point(335, 85);
+            this.Yeast_tbox.Location = new System.Drawing.Point(335, 115);
             this.Yeast_tbox.Name = "Yeast_tbox";
             this.Yeast_tbox.Size = new System.Drawing.Size(230, 22);
             this.Yeast_tbox.TabIndex = 53;
@@ -138,7 +138,7 @@
             // NutrientSubmit_btn
             // 
             this.NutrientSubmit_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NutrientSubmit_btn.Location = new System.Drawing.Point(205, 209);
+            this.NutrientSubmit_btn.Location = new System.Drawing.Point(381, 179);
             this.NutrientSubmit_btn.Name = "NutrientSubmit_btn";
             this.NutrientSubmit_btn.Size = new System.Drawing.Size(135, 35);
             this.NutrientSubmit_btn.TabIndex = 59;
@@ -149,7 +149,7 @@
             // NutrientDescrip_tbox
             // 
             this.NutrientDescrip_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NutrientDescrip_tbox.Location = new System.Drawing.Point(112, 181);
+            this.NutrientDescrip_tbox.Location = new System.Drawing.Point(112, 192);
             this.NutrientDescrip_tbox.Name = "NutrientDescrip_tbox";
             this.NutrientDescrip_tbox.Size = new System.Drawing.Size(205, 22);
             this.NutrientDescrip_tbox.TabIndex = 58;
@@ -157,7 +157,7 @@
             // NutrientAmount_tbox
             // 
             this.NutrientAmount_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NutrientAmount_tbox.Location = new System.Drawing.Point(27, 181);
+            this.NutrientAmount_tbox.Location = new System.Drawing.Point(27, 192);
             this.NutrientAmount_tbox.Name = "NutrientAmount_tbox";
             this.NutrientAmount_tbox.Size = new System.Drawing.Size(63, 22);
             this.NutrientAmount_tbox.TabIndex = 57;
@@ -166,7 +166,7 @@
             // 
             this.NutrientDescrip_lbl.AutoSize = true;
             this.NutrientDescrip_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NutrientDescrip_lbl.Location = new System.Drawing.Point(128, 148);
+            this.NutrientDescrip_lbl.Location = new System.Drawing.Point(128, 159);
             this.NutrientDescrip_lbl.Name = "NutrientDescrip_lbl";
             this.NutrientDescrip_lbl.Size = new System.Drawing.Size(162, 16);
             this.NutrientDescrip_lbl.TabIndex = 56;
@@ -176,7 +176,7 @@
             // 
             this.Amount_lbl.AutoSize = true;
             this.Amount_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Amount_lbl.Location = new System.Drawing.Point(24, 148);
+            this.Amount_lbl.Location = new System.Drawing.Point(24, 159);
             this.Amount_lbl.Name = "Amount_lbl";
             this.Amount_lbl.Size = new System.Drawing.Size(78, 16);
             this.Amount_lbl.TabIndex = 55;
@@ -185,7 +185,7 @@
             // YeastNutrient_tbox
             // 
             this.YeastNutrient_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YeastNutrient_tbox.Location = new System.Drawing.Point(335, 181);
+            this.YeastNutrient_tbox.Location = new System.Drawing.Point(335, 231);
             this.YeastNutrient_tbox.Name = "YeastNutrient_tbox";
             this.YeastNutrient_tbox.Size = new System.Drawing.Size(230, 22);
             this.YeastNutrient_tbox.TabIndex = 60;

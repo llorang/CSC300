@@ -48,9 +48,7 @@
             this.BrewMethod_btn = new System.Windows.Forms.Button();
             this.BrewMethod_cbox = new System.Windows.Forms.ComboBox();
             this.BatchVolume_cbox = new System.Windows.Forms.ComboBox();
-            this.BatchVolume_btn = new System.Windows.Forms.Button();
             this.BatchVolume_lbl = new System.Windows.Forms.Label();
-            this.BeerType_btn = new System.Windows.Forms.Button();
             this.BeerType_cbox = new System.Windows.Forms.ComboBox();
             this.BeerType_lbl = new System.Windows.Forms.Label();
             this.OGRange_lbl = new System.Windows.Forms.Label();
@@ -68,6 +66,12 @@
             this.BrewEquipment_btn = new System.Windows.Forms.Button();
             this.Ingredients_btn = new System.Windows.Forms.Button();
             this.Yeast_btn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.BottleVolume_cbox = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BottleType_cbox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Lbl_BatchNumber
@@ -82,11 +86,11 @@
             // 
             // Cbx_BatchNumber
             // 
-            this.Cbx_BatchNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cbx_BatchNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cbx_BatchNumber.FormattingEnabled = true;
-            this.Cbx_BatchNumber.Location = new System.Drawing.Point(341, 36);
+            this.Cbx_BatchNumber.Location = new System.Drawing.Point(341, 40);
             this.Cbx_BatchNumber.Name = "Cbx_BatchNumber";
-            this.Cbx_BatchNumber.Size = new System.Drawing.Size(113, 28);
+            this.Cbx_BatchNumber.Size = new System.Drawing.Size(113, 24);
             this.Cbx_BatchNumber.TabIndex = 4;
             // 
             // ProdType_lbl
@@ -111,7 +115,7 @@
             this.ProdType_cbox.Location = new System.Drawing.Point(15, 40);
             this.ProdType_cbox.Name = "ProdType_cbox";
             this.ProdType_cbox.Size = new System.Drawing.Size(152, 24);
-            this.ProdType_cbox.TabIndex = 6;
+            this.ProdType_cbox.TabIndex = 0;
             // 
             // SubmitProdType_btn
             // 
@@ -146,7 +150,7 @@
             // BatchNumber_btn
             // 
             this.BatchNumber_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BatchNumber_btn.Location = new System.Drawing.Point(359, 72);
+            this.BatchNumber_btn.Location = new System.Drawing.Point(359, 71);
             this.BatchNumber_btn.Name = "BatchNumber_btn";
             this.BatchNumber_btn.Size = new System.Drawing.Size(69, 21);
             this.BatchNumber_btn.TabIndex = 10;
@@ -176,7 +180,7 @@
             // 
             this.MashLauter_btn.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.MashLauter_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MashLauter_btn.Location = new System.Drawing.Point(283, 553);
+            this.MashLauter_btn.Location = new System.Drawing.Point(283, 591);
             this.MashLauter_btn.Name = "MashLauter_btn";
             this.MashLauter_btn.Size = new System.Drawing.Size(213, 29);
             this.MashLauter_btn.TabIndex = 13;
@@ -187,17 +191,17 @@
             // AcceptBatchID_lbl
             // 
             this.AcceptBatchID_lbl.AutoSize = true;
-            this.AcceptBatchID_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AcceptBatchID_lbl.Location = new System.Drawing.Point(257, 346);
+            this.AcceptBatchID_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AcceptBatchID_lbl.Location = new System.Drawing.Point(255, 436);
             this.AcceptBatchID_lbl.Name = "AcceptBatchID_lbl";
-            this.AcceptBatchID_lbl.Size = new System.Drawing.Size(122, 16);
+            this.AcceptBatchID_lbl.Size = new System.Drawing.Size(146, 20);
             this.AcceptBatchID_lbl.TabIndex = 16;
             this.AcceptBatchID_lbl.Text = "Accept BatchID?";
             // 
             // AcceptBatchID_btn
             // 
             this.AcceptBatchID_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AcceptBatchID_btn.Location = new System.Drawing.Point(443, 334);
+            this.AcceptBatchID_btn.Location = new System.Drawing.Point(441, 424);
             this.AcceptBatchID_btn.Name = "AcceptBatchID_btn";
             this.AcceptBatchID_btn.Size = new System.Drawing.Size(65, 39);
             this.AcceptBatchID_btn.TabIndex = 17;
@@ -282,17 +286,7 @@
             this.BatchVolume_cbox.Name = "BatchVolume_cbox";
             this.BatchVolume_cbox.Size = new System.Drawing.Size(115, 24);
             this.BatchVolume_cbox.TabIndex = 27;
-            // 
-            // BatchVolume_btn
-            // 
-            this.BatchVolume_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BatchVolume_btn.Location = new System.Drawing.Point(225, 183);
-            this.BatchVolume_btn.Name = "BatchVolume_btn";
-            this.BatchVolume_btn.Size = new System.Drawing.Size(63, 23);
-            this.BatchVolume_btn.TabIndex = 26;
-            this.BatchVolume_btn.Text = "Submit";
-            this.BatchVolume_btn.UseVisualStyleBackColor = true;
-            this.BatchVolume_btn.Click += new System.EventHandler(this.BatchVolume_btn_Click);
+            this.BatchVolume_cbox.SelectedIndexChanged += new System.EventHandler(this.BatchVolume_cbox_SelectedIndexChanged);
             // 
             // BatchVolume_lbl
             // 
@@ -304,17 +298,6 @@
             this.BatchVolume_lbl.TabIndex = 25;
             this.BatchVolume_lbl.Text = "Batch Vol (gal)";
             // 
-            // BeerType_btn
-            // 
-            this.BeerType_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BeerType_btn.Location = new System.Drawing.Point(648, 71);
-            this.BeerType_btn.Name = "BeerType_btn";
-            this.BeerType_btn.Size = new System.Drawing.Size(63, 23);
-            this.BeerType_btn.TabIndex = 30;
-            this.BeerType_btn.Text = "Submit";
-            this.BeerType_btn.UseVisualStyleBackColor = true;
-            this.BeerType_btn.Click += new System.EventHandler(this.BeerType_btn_Click);
-            // 
             // BeerType_cbox
             // 
             this.BeerType_cbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -323,10 +306,11 @@
             "Ale",
             "Lager",
             "BarleyWine"});
-            this.BeerType_cbox.Location = new System.Drawing.Point(607, 41);
+            this.BeerType_cbox.Location = new System.Drawing.Point(607, 40);
             this.BeerType_cbox.Name = "BeerType_cbox";
             this.BeerType_cbox.Size = new System.Drawing.Size(152, 24);
             this.BeerType_cbox.TabIndex = 29;
+            this.BeerType_cbox.SelectedIndexChanged += new System.EventHandler(this.BeerType_cbox_SelectedIndexChanged);
             // 
             // BeerType_lbl
             // 
@@ -546,7 +530,7 @@
             // BrewEquipment_btn
             // 
             this.BrewEquipment_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BrewEquipment_btn.Location = new System.Drawing.Point(319, 438);
+            this.BrewEquipment_btn.Location = new System.Drawing.Point(320, 510);
             this.BrewEquipment_btn.Name = "BrewEquipment_btn";
             this.BrewEquipment_btn.Size = new System.Drawing.Size(134, 37);
             this.BrewEquipment_btn.TabIndex = 45;
@@ -557,7 +541,7 @@
             // Ingredients_btn
             // 
             this.Ingredients_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ingredients_btn.Location = new System.Drawing.Point(64, 438);
+            this.Ingredients_btn.Location = new System.Drawing.Point(65, 510);
             this.Ingredients_btn.Name = "Ingredients_btn";
             this.Ingredients_btn.Size = new System.Drawing.Size(134, 37);
             this.Ingredients_btn.TabIndex = 46;
@@ -568,7 +552,7 @@
             // Yeast_btn
             // 
             this.Yeast_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Yeast_btn.Location = new System.Drawing.Point(581, 438);
+            this.Yeast_btn.Location = new System.Drawing.Point(582, 510);
             this.Yeast_btn.Name = "Yeast_btn";
             this.Yeast_btn.Size = new System.Drawing.Size(134, 37);
             this.Yeast_btn.TabIndex = 47;
@@ -576,11 +560,86 @@
             this.Yeast_btn.UseVisualStyleBackColor = true;
             this.Yeast_btn.Click += new System.EventHandler(this.Yeast_btn_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(406, 355);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 20);
+            this.label2.TabIndex = 49;
+            this.label2.Text = "Bottle Volume";
+            // 
+            // BottleVolume_cbox
+            // 
+            this.BottleVolume_cbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BottleVolume_cbox.FormattingEnabled = true;
+            this.BottleVolume_cbox.Items.AddRange(new object[] {
+            "12",
+            "16",
+            "20",
+            "24"});
+            this.BottleVolume_cbox.Location = new System.Drawing.Point(545, 355);
+            this.BottleVolume_cbox.Name = "BottleVolume_cbox";
+            this.BottleVolume_cbox.Size = new System.Drawing.Size(99, 24);
+            this.BottleVolume_cbox.TabIndex = 51;
+            this.BottleVolume_cbox.SelectedIndexChanged += new System.EventHandler(this.BottleVolume_cbox_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(651, 355);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 20);
+            this.label3.TabIndex = 52;
+            this.label3.Text = "oz";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(321, 355);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 20);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "oz";
+            // 
+            // BottleType_cbox
+            // 
+            this.BottleType_cbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BottleType_cbox.FormattingEnabled = true;
+            this.BottleType_cbox.Items.AddRange(new object[] {
+            "Swivel Top",
+            "Long Neck",
+            "Short Neck"});
+            this.BottleType_cbox.Location = new System.Drawing.Point(215, 355);
+            this.BottleType_cbox.Name = "BottleType_cbox";
+            this.BottleType_cbox.Size = new System.Drawing.Size(99, 24);
+            this.BottleType_cbox.TabIndex = 54;
+            this.BottleType_cbox.SelectedIndexChanged += new System.EventHandler(this.BottleType_cbox_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(98, 355);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 20);
+            this.label4.TabIndex = 53;
+            this.label4.Text = "Bottle Type";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(38F, 73F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 607);
+            this.ClientSize = new System.Drawing.Size(771, 649);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BottleType_cbox);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.BottleVolume_cbox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.Yeast_btn);
             this.Controls.Add(this.Ingredients_btn);
             this.Controls.Add(this.BrewEquipment_btn);
@@ -596,11 +655,9 @@
             this.Controls.Add(this.OGUpper_cbox);
             this.Controls.Add(this.OGLower_cbox);
             this.Controls.Add(this.OGRange_lbl);
-            this.Controls.Add(this.BeerType_btn);
             this.Controls.Add(this.BeerType_cbox);
             this.Controls.Add(this.BeerType_lbl);
             this.Controls.Add(this.BatchVolume_cbox);
-            this.Controls.Add(this.BatchVolume_btn);
             this.Controls.Add(this.BatchVolume_lbl);
             this.Controls.Add(this.BrewMethod_cbox);
             this.Controls.Add(this.BrewMethod_btn);
@@ -653,9 +710,7 @@
         private System.Windows.Forms.Button BrewMethod_btn;
         private System.Windows.Forms.ComboBox BrewMethod_cbox;
         private System.Windows.Forms.ComboBox BatchVolume_cbox;
-        private System.Windows.Forms.Button BatchVolume_btn;
         private System.Windows.Forms.Label BatchVolume_lbl;
-        private System.Windows.Forms.Button BeerType_btn;
         private System.Windows.Forms.ComboBox BeerType_cbox;
         private System.Windows.Forms.Label BeerType_lbl;
         private System.Windows.Forms.Label OGRange_lbl;
@@ -673,6 +728,12 @@
         private System.Windows.Forms.Button BrewEquipment_btn;
         private System.Windows.Forms.Button Ingredients_btn;
         private System.Windows.Forms.Button Yeast_btn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox BottleVolume_cbox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox BottleType_cbox;
+        private System.Windows.Forms.Label label4;
     }
 }
 

@@ -11,15 +11,17 @@ namespace AlcoholMaker
     public class Lager : Beer, IBottlingBeer
     {
         protected override string _beerType { get { return "Lager"; } }
-        public string BeerType { get; set; }
+        public string BeerType { get;}
 
         public string BottleType { get; set; }
         public int BottleVolume { get; set; }
         public string PrimingSugarType { get { return "corn sugar"; } }
 
-        public Lager(string name, double batchvolume, BrewMethod brewMethod, double IBUs) : base(name, batchvolume, brewMethod, IBUs)
+        public Lager(string name, double batchvolume, BrewMethod brewMethod, double IBUs, string bottleType, int bottleVol) : base(name, batchvolume, brewMethod, IBUs)
         {
             BeerType = _beerType;
+            BottleType = bottleType;
+            BottleVolume = bottleVol;
         }
 
         public double PrimingSugarAmount(double batchVolume)

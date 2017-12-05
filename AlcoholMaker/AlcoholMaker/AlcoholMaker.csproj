@@ -57,6 +57,7 @@
     </Compile>
     <Compile Include="Bottling\Bottling.cs" />
     <Compile Include="Bottling\IBottlingBeer.cs" />
+    <Compile Include="Bottling\IBottlingMead.cs" />
     <Compile Include="EquipmentAllGrain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,7 +77,7 @@
       <DependentUpon>FermBottlingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Fermentation\Fermentation.cs" />
-    <Compile Include="FermentedProducts.cs" />
+    <Compile Include="FermentedProducts\FermentedProducts.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

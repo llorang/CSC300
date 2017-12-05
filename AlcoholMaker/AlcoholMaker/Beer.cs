@@ -48,7 +48,8 @@ namespace AlcoholMaker
         public static Hydrometer FinalGravCorrected;
 
         public static double ApparentAttenuation { get; set; }
-
+        public static int BottlesFilled { get; set; }
+        public static List<Fermentation.Fermentation> FermTemps;
 
         public Beer(string name, double batchvolume, BrewMethod brewMethod, double IBUs) : base(name, batchvolume, brewMethod)
         {

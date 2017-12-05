@@ -13,26 +13,12 @@ namespace AlcoholMaker
 {
     public abstract class FermentedProducts : Alcohol
     {
-
-
         public string Name { get; set;}
-        public double BatchVolume { get; set; }
+        public static double BatchVolume { get; set; }
 
         protected virtual string _productType {get { return "Fermented Product"; }}
 
 
-
-        public double OG
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
 
         public double FG
         {

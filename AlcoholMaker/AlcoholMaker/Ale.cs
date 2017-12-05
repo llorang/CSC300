@@ -11,8 +11,8 @@ namespace AlcoholMaker
     public class Ale : Beer, IBottlingBeer
     {
         protected override string _beerType { get { return "Ale"; } }
-        public string BeerType { get; set; }
-
+        public string BeerType { get;}
+      
         public string BottleType { get; set; }
         public int BottleVolume { get; set; }
         public string PrimingSugarType { get { return "cane sugar"; } }
@@ -20,6 +20,8 @@ namespace AlcoholMaker
         public Ale(string name, double batchvolume, BrewMethod brewMethod, double IBUs, string bottleType, int bottleVol) : base(name, batchvolume, brewMethod, IBUs)
         {
             BeerType = _beerType;
+            BottleType = bottleType;
+            BottleVolume = bottleVol;
         }
 
         public double PrimingSugarAmount(double batchVolume)

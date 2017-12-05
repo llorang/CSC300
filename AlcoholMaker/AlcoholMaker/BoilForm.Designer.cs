@@ -446,16 +446,6 @@
             // 
             this.PostBoilGravReading_cbox.FormattingEnabled = true;
             this.PostBoilGravReading_cbox.Items.AddRange(new object[] {
-            "1.020",
-            "1.021",
-            "1.022",
-            "1.023",
-            "1.024",
-            "1.025",
-            "1.026",
-            "1.027",
-            "1.028",
-            "1.029",
             "1.030",
             "1.031",
             "1.032",
@@ -466,7 +456,17 @@
             "1.037",
             "1.038",
             "1.039",
-            "1.040"});
+            "1.040",
+            "1.041",
+            "1.042",
+            "1.043",
+            "1.044",
+            "1.045",
+            "1.046",
+            "1.047",
+            "1.048",
+            "1.049",
+            "1.050"});
             this.PostBoilGravReading_cbox.Location = new System.Drawing.Point(172, 520);
             this.PostBoilGravReading_cbox.Name = "PostBoilGravReading_cbox";
             this.PostBoilGravReading_cbox.Size = new System.Drawing.Size(95, 21);
