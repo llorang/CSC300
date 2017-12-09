@@ -20,8 +20,6 @@ namespace AlcoholMaker
 
         protected virtual string _productType {get { return "Fermented Product"; }}
 
-
-
         public BrewMethod CurrentMethod;
         public enum BrewMethod { Extract, PartialMash, AllGrain, Other}
 
@@ -38,11 +36,6 @@ namespace AlcoholMaker
             Name = name;
             BatchVolume = batchVolume;
             CurrentMethod = brewMethod;
-        }
-
-        public virtual void YeastCalc()
-        {
-            throw new NotImplementedException();
         }
     }
 }
