@@ -23,7 +23,9 @@ namespace AlcoholMaker
         private int _boilTime2;
         private int _boilTime3;
         private int _boilTime4;
-        private double _ibuTotal = 0.0;
+        private static double _ibuTotal = 0.0;
+
+        public static double IBUtotal { get { return _ibuTotal; } }
          
         public HopAdditions()
         {

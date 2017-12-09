@@ -69,6 +69,19 @@ namespace AlcoholMaker
             Beer.FermTemps.Add(new Fermentation.Fermentation() { Day = FermDay, Temp = _fermTemp });
         }
 
+        private void LoadTempData_btn_Click(object sender, EventArgs e)
+        {
+            if (Beer.FermTemps.ElementAt(0) == null)
+            {
+                MessageBox.Show("Day/Temp List is empty.");
+            }
+            else
+            {
+                DayTemp_lbox.DataSource = Beer.FermTemps;
+                DayTemp_lbox.DisplayMember = "Display";
+            }
+        }
+
         private void FinalGravReading_cbox_SelectedIndexChanged(object sender, EventArgs e)
         {
             _hydroReadingRaw = Convert.ToDouble(FinalGravReading_cbox.SelectedItem);
@@ -83,19 +96,15 @@ namespace AlcoholMaker
         {
             Beer.FinalGravUncorrected = new Hydrometer(_hydroReadingRaw, _hydroTempRaw);
             Beer.FinalGravCorrected = Beer.FinalGravUncorrected.TempCorrect(60);
-            FinalGravity_tbox.Text = Convert.ToString(Math.Round(Beer.FinalGravCorrected.Reading, 4));
+            FinalGravity_tbox.Text = Convert.ToString(Math.Round(Beer.FinalGravCorrected.Reading, 3));
         }
 
         private void CalcABV_btn_Click(object sender, EventArgs e)
         {
             Alcohol.ABV = ABV.CalculateABV(Beer.PostBoilGravCorrected.Reading, Beer.FinalGravCorrected.Reading);
+            ABV_tbox.Text = Convert.ToString(Math.Round(Alcohol.ABV, 2));
             Beer.ApparentAttenuation = ApparentAttenuation.CalcAA(Beer.PostBoilGravCorrected.Reading, Beer.FinalGravCorrected.Reading);
-        }
-
-        private void ABV_tbox_TextChanged(object sender, EventArgs e)
-        {
-            ABV_tbox.Text = Convert.ToString(Math.Round(Alcohol.ABV, 3));
-            AA_tbox.Text = Convert.ToString(Math.Round(Beer.ApparentAttenuation, 3));
+            AA_tbox.Text = Convert.ToString(Math.Round(Beer.ApparentAttenuation, 1));
         }
 
         private void LoadBottleData_btn_Click(object sender, EventArgs e)
@@ -106,9 +115,10 @@ namespace AlcoholMaker
             BottlesNeeded_tbox.Text = Convert.ToString(Bottling.Bottling.CalcNumberOfBottles(FermentedProducts.BatchVolume, 12));
         }
 
-        private void BottlesFilled_tbox_TextChanged(object sender, EventArgs e)
+        private void BottlesFilled_btn_Click(object sender, EventArgs e)
         {
             Beer.BottlesFilled = Convert.ToInt16(BottlesFilled_tbox.Text);
+            MessageBox.Show(Beer.BottlesFilled.ToString());
         }
 
         private void FermDay_cbox_SelectedIndexChanged(object sender, EventArgs e)
@@ -120,5 +130,12 @@ namespace AlcoholMaker
         {
             _fermTemp = Convert.ToInt32(FermDay_cbox.SelectedItem.ToString());
         }
+
+        private void SummaryPage_btn_Click(object sender, EventArgs e)
+        {
+            SummaryForm summaryForm = new SummaryForm();
+            summaryForm.Show();
+        }
+
     }
 }

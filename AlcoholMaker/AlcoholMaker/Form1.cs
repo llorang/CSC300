@@ -5,10 +5,10 @@ namespace AlcoholMaker
 {
     public partial class MainForm : Form
     {
-        private string _beerType_tmp { get; set; }
-        private string _batchName_tmp { get; set; }
-        private double _batchVolume_tmp { get; set; }
-        private FermentedProducts.BrewMethod _brewMethod_tmp { get; set; }
+        private static string _beerType_tmp { get; set; }
+        private static string _batchName_tmp { get; set; }
+        private static double _batchVolume_tmp { get; set; }
+        private static FermentedProducts.BrewMethod _brewMethod_tmp { get; set; }
         private double _ibuValue_tmp { get; set; }
         private string _bottleType_tmp { get; set; }
         private int _bottleVolume_tmp { get; set; }
@@ -16,6 +16,11 @@ namespace AlcoholMaker
         private RangePair OG = new RangePair();
         private RangePair FG = new RangePair();
         private RangePair FermTemp = new RangePair();
+
+        public static string Beertype { get { return _beerType_tmp; } }
+        public static string Batchname { get { return _batchName_tmp; } }
+        public static FermentedProducts.BrewMethod BrewMethod { get { return _brewMethod_tmp; } }
+        public static double Batchvolume { get { return _batchVolume_tmp; } }
 
         public MainForm() => InitializeComponent();
 
@@ -60,7 +65,8 @@ namespace AlcoholMaker
                     batchIDsuffix = "####";
 
             //Append batch number with batch prefix to produce BatchID
-            BatchID_txt.Text = (string)ProdType_cbox.SelectedItem + batchIDsuffix;
+            FermentedProducts.BatchID = (string)ProdType_cbox.SelectedItem + batchIDsuffix;
+            BatchID_txt.Text = FermentedProducts.BatchID;
         }
 
         private void BeerType_cbox_SelectedIndexChanged(object sender, EventArgs e)

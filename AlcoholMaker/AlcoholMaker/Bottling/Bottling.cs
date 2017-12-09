@@ -10,7 +10,7 @@ namespace AlcoholMaker.Bottling
     {
         public static int CalcNumberOfBottles(double batchVol, int bottleVol)
         {
-            return (int) (batchVol * 128 / bottleVol);
+            return (int) Math.Round((batchVol * 128 / bottleVol));
         }
     }
 }

@@ -33,7 +33,7 @@ namespace AlcoholMaker
         {
             Beer.PreBoilGravUncorrected = new Hydrometer(_hydroReadingRaw, _hydroTempRaw);
             Beer.PreBoilGravCorrected = Beer.PreBoilGravUncorrected.TempCorrect(60);
-            PreBoilGravity_tbox.Text = Convert.ToString(Math.Round(Beer.PreBoilGravCorrected.Reading, 4));
+            PreBoilGravity_tbox.Text = Convert.ToString(Math.Round(Beer.PreBoilGravCorrected.Reading, 3));
         }
 
         private void LoadFields_btn_Click(object sender, EventArgs e)
@@ -97,7 +97,7 @@ namespace AlcoholMaker
         {
             Beer.PostBoilGravUncorrected = new Hydrometer(_hydroReadingRaw, _hydroTempRaw);
             Beer.PostBoilGravCorrected = Beer.PostBoilGravUncorrected.TempCorrect(60);
-            PostBoilGravity_tbox.Text = Convert.ToString(Math.Round(Beer.PostBoilGravCorrected.Reading, 4));
+            PostBoilGravity_tbox.Text = Convert.ToString(Math.Round(Beer.PostBoilGravCorrected.Reading, 3));
         }
 
         private void FermBottling_btn_Click(object sender, EventArgs e)

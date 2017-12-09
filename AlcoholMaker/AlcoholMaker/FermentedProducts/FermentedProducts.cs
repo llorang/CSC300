@@ -13,6 +13,7 @@ namespace AlcoholMaker
 {
     public abstract class FermentedProducts : Alcohol
     {
+        public static string BatchID { get; set; }
         public string Name { get; set;}
         public static double BatchVolume { get; set; }
 
@@ -21,18 +22,6 @@ namespace AlcoholMaker
 
 
         public double FG
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public int BatchID
         {
             get
             {
@@ -55,8 +44,6 @@ namespace AlcoholMaker
                 throw new NotImplementedException();
             }
         }
-
-
 
         public BrewMethod CurrentMethod;
         public enum BrewMethod { Extract, PartialMash, AllGrain, Other}

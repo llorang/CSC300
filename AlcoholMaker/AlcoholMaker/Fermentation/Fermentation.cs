@@ -10,5 +10,13 @@ namespace AlcoholMaker.Fermentation
     {
         public int Day { get; set; }
         public double Temp { get; set; }
+
+        public string Display
+        { get
+            {
+                return String.Format("Day {0}  Temp {1}", Day, Temp);
+            }
+        }
+
     }
 }

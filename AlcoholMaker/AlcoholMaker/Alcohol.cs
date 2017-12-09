@@ -10,17 +10,7 @@ namespace AlcoholMaker
     {
         public static double ABV { get; set; }
 
-        public static double HydrometerValue
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+
 
         public static double RefractomerValue
         {
@@ -35,9 +25,5 @@ namespace AlcoholMaker
         }
 
 
-        public static double SpecificGravity()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

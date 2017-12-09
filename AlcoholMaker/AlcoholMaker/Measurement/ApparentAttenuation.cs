@@ -12,7 +12,7 @@ namespace AlcoholMaker.Measurement
         //Equation from BYO Magazine, Vol 15, Issue 4
         public static double CalcAA(double OG, double FG)
         {
-            return (OG - FG) / FG * 100;
+            return (OG - FG) / (OG - 1.0) * 100;
         }
     }
 }

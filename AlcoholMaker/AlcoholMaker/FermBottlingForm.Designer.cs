@@ -72,6 +72,10 @@
             this.NewFermList_btn = new System.Windows.Forms.Button();
             this.FermDay_cbox = new System.Windows.Forms.ComboBox();
             this.FermTemp_cbox = new System.Windows.Forms.ComboBox();
+            this.BottlesFilled_btn = new System.Windows.Forms.Button();
+            this.SummaryPage_btn = new System.Windows.Forms.Button();
+            this.DayTemp_lbox = new System.Windows.Forms.ListBox();
+            this.LoadTempData_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -158,9 +162,9 @@
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(543, 283);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(129, 16);
+            this.label22.Size = new System.Drawing.Size(127, 16);
             this.label22.TabIndex = 51;
-            this.label22.Text = "Wort Gravity (OG)";
+            this.label22.Text = "Wort Gravity (FG)";
             // 
             // FinalGravity_tbox
             // 
@@ -277,7 +281,6 @@
             this.ABV_tbox.Name = "ABV_tbox";
             this.ABV_tbox.Size = new System.Drawing.Size(74, 22);
             this.ABV_tbox.TabIndex = 53;
-            this.ABV_tbox.TextChanged += new System.EventHandler(this.ABV_tbox_TextChanged);
             // 
             // label6
             // 
@@ -416,7 +419,7 @@
             // BottlesNeeded_tbox
             // 
             this.BottlesNeeded_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BottlesNeeded_tbox.Location = new System.Drawing.Point(282, 578);
+            this.BottlesNeeded_tbox.Location = new System.Drawing.Point(282, 554);
             this.BottlesNeeded_tbox.Name = "BottlesNeeded_tbox";
             this.BottlesNeeded_tbox.Size = new System.Drawing.Size(48, 22);
             this.BottlesNeeded_tbox.TabIndex = 70;
@@ -425,7 +428,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(145, 579);
+            this.label20.Location = new System.Drawing.Point(145, 555);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(123, 18);
             this.label20.TabIndex = 68;
@@ -434,17 +437,16 @@
             // BottlesFilled_tbox
             // 
             this.BottlesFilled_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BottlesFilled_tbox.Location = new System.Drawing.Point(552, 578);
+            this.BottlesFilled_tbox.Location = new System.Drawing.Point(528, 554);
             this.BottlesFilled_tbox.Name = "BottlesFilled_tbox";
             this.BottlesFilled_tbox.Size = new System.Drawing.Size(48, 22);
             this.BottlesFilled_tbox.TabIndex = 72;
-            this.BottlesFilled_tbox.TextChanged += new System.EventHandler(this.BottlesFilled_tbox_TextChanged);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(433, 579);
+            this.label14.Location = new System.Drawing.Point(409, 555);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(106, 18);
             this.label14.TabIndex = 71;
@@ -545,11 +547,56 @@
             this.FermTemp_cbox.TabIndex = 80;
             this.FermTemp_cbox.SelectedIndexChanged += new System.EventHandler(this.FermTemp_cbox_SelectedIndexChanged);
             // 
+            // BottlesFilled_btn
+            // 
+            this.BottlesFilled_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BottlesFilled_btn.Location = new System.Drawing.Point(600, 548);
+            this.BottlesFilled_btn.Name = "BottlesFilled_btn";
+            this.BottlesFilled_btn.Size = new System.Drawing.Size(61, 33);
+            this.BottlesFilled_btn.TabIndex = 81;
+            this.BottlesFilled_btn.Text = "Submit";
+            this.BottlesFilled_btn.UseVisualStyleBackColor = true;
+            this.BottlesFilled_btn.Click += new System.EventHandler(this.BottlesFilled_btn_Click);
+            // 
+            // SummaryPage_btn
+            // 
+            this.SummaryPage_btn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.SummaryPage_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SummaryPage_btn.Location = new System.Drawing.Point(261, 615);
+            this.SummaryPage_btn.Name = "SummaryPage_btn";
+            this.SummaryPage_btn.Size = new System.Drawing.Size(213, 29);
+            this.SummaryPage_btn.TabIndex = 82;
+            this.SummaryPage_btn.Text = "Summary Page";
+            this.SummaryPage_btn.UseVisualStyleBackColor = false;
+            this.SummaryPage_btn.Click += new System.EventHandler(this.SummaryPage_btn_Click);
+            // 
+            // DayTemp_lbox
+            // 
+            this.DayTemp_lbox.FormattingEnabled = true;
+            this.DayTemp_lbox.Location = new System.Drawing.Point(616, 22);
+            this.DayTemp_lbox.Name = "DayTemp_lbox";
+            this.DayTemp_lbox.Size = new System.Drawing.Size(128, 173);
+            this.DayTemp_lbox.TabIndex = 83;
+            // 
+            // LoadTempData_btn
+            // 
+            this.LoadTempData_btn.Location = new System.Drawing.Point(616, 209);
+            this.LoadTempData_btn.Name = "LoadTempData_btn";
+            this.LoadTempData_btn.Size = new System.Drawing.Size(131, 33);
+            this.LoadTempData_btn.TabIndex = 84;
+            this.LoadTempData_btn.Text = "Load Temp Data";
+            this.LoadTempData_btn.UseVisualStyleBackColor = true;
+            this.LoadTempData_btn.Click += new System.EventHandler(this.LoadTempData_btn_Click);
+            // 
             // FermBottlingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 656);
+            this.Controls.Add(this.LoadTempData_btn);
+            this.Controls.Add(this.DayTemp_lbox);
+            this.Controls.Add(this.SummaryPage_btn);
+            this.Controls.Add(this.BottlesFilled_btn);
             this.Controls.Add(this.FermTemp_cbox);
             this.Controls.Add(this.FermDay_cbox);
             this.Controls.Add(this.NewFermList_btn);
@@ -648,5 +695,9 @@
         private System.Windows.Forms.Button NewFermList_btn;
         private System.Windows.Forms.ComboBox FermDay_cbox;
         private System.Windows.Forms.ComboBox FermTemp_cbox;
+        private System.Windows.Forms.Button BottlesFilled_btn;
+        private System.Windows.Forms.Button SummaryPage_btn;
+        private System.Windows.Forms.ListBox DayTemp_lbox;
+        private System.Windows.Forms.Button LoadTempData_btn;
     }
 }
