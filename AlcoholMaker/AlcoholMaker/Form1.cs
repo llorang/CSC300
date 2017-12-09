@@ -181,6 +181,8 @@ namespace AlcoholMaker
                 MessageBox.Show("add BarleyWine constructor");
             else
                 MessageBox.Show("Select a beer type");
+
+            FermentedProducts.BatchDate = DateTime.Now;
         }
 
         private void Ingredients_btn_Click(object sender, EventArgs e)

@@ -50,6 +50,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.IBUs_txt = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.Recommendations_rtbox = new System.Windows.Forms.RichTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Date_tbox = new System.Windows.Forms.TextBox();
+            this.Done_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BatchID_txt
@@ -92,7 +97,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(183, 15);
+            this.label3.Location = new System.Drawing.Point(124, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 20);
             this.label3.TabIndex = 17;
@@ -100,7 +105,7 @@
             // 
             // SumReportLoad_btn
             // 
-            this.SumReportLoad_btn.Location = new System.Drawing.Point(360, 9);
+            this.SumReportLoad_btn.Location = new System.Drawing.Point(301, 3);
             this.SumReportLoad_btn.Name = "SumReportLoad_btn";
             this.SumReportLoad_btn.Size = new System.Drawing.Size(74, 34);
             this.SumReportLoad_btn.TabIndex = 18;
@@ -186,9 +191,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(289, 158);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 16);
+            this.label9.Size = new System.Drawing.Size(65, 16);
             this.label9.TabIndex = 28;
-            this.label9.Text = "ABV";
+            this.label9.Text = "ABV (%)";
             // 
             // ABV_txt
             // 
@@ -212,9 +217,9 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(428, 158);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(117, 16);
+            this.label12.Size = new System.Drawing.Size(144, 16);
             this.label12.TabIndex = 29;
-            this.label12.Text = "App Attenuation";
+            this.label12.Text = "App Attenuation (%)";
             // 
             // Volume_txt
             // 
@@ -230,9 +235,9 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(601, 51);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 16);
+            this.label8.Size = new System.Drawing.Size(96, 16);
             this.label8.TabIndex = 31;
-            this.label8.Text = "Volume";
+            this.label8.Text = "Volume (gal)";
             // 
             // IBUs_txt
             // 
@@ -252,11 +257,64 @@
             this.label11.TabIndex = 33;
             this.label11.Text = "IBUs";
             // 
+            // Recommendations_rtbox
+            // 
+            this.Recommendations_rtbox.Location = new System.Drawing.Point(48, 291);
+            this.Recommendations_rtbox.Name = "Recommendations_rtbox";
+            this.Recommendations_rtbox.Size = new System.Drawing.Size(635, 120);
+            this.Recommendations_rtbox.TabIndex = 35;
+            this.Recommendations_rtbox.Text = "";
+            this.Recommendations_rtbox.TextChanged += new System.EventHandler(this.Recommendations_rtbox_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(45, 272);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(137, 16);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "Recommendations";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(487, 19);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 16);
+            this.label10.TabIndex = 37;
+            this.label10.Text = "Date";
+            // 
+            // Date_tbox
+            // 
+            this.Date_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date_tbox.Location = new System.Drawing.Point(534, 16);
+            this.Date_tbox.Name = "Date_tbox";
+            this.Date_tbox.Size = new System.Drawing.Size(127, 22);
+            this.Date_tbox.TabIndex = 38;
+            // 
+            // Done_btn
+            // 
+            this.Done_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Done_btn.Location = new System.Drawing.Point(320, 447);
+            this.Done_btn.Name = "Done_btn";
+            this.Done_btn.Size = new System.Drawing.Size(111, 32);
+            this.Done_btn.TabIndex = 39;
+            this.Done_btn.Text = "DONE";
+            this.Done_btn.UseVisualStyleBackColor = true;
+            this.Done_btn.Click += new System.EventHandler(this.Done_btn_Click);
+            // 
             // SummaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 325);
+            this.ClientSize = new System.Drawing.Size(721, 498);
+            this.Controls.Add(this.Done_btn);
+            this.Controls.Add(this.Date_tbox);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.Recommendations_rtbox);
             this.Controls.Add(this.IBUs_txt);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.Volume_txt);
@@ -310,5 +368,10 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label IBUs_txt;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.RichTextBox Recommendations_rtbox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox Date_tbox;
+        private System.Windows.Forms.Button Done_btn;
     }
 }

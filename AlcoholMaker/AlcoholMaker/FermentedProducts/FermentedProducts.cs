@@ -16,34 +16,11 @@ namespace AlcoholMaker
         public static string BatchID { get; set; }
         public string Name { get; set;}
         public static double BatchVolume { get; set; }
+        public static DateTime BatchDate { get; set; }
 
         protected virtual string _productType {get { return "Fermented Product"; }}
 
 
-
-        public double FG
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public virtual string YeastType
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
 
         public BrewMethod CurrentMethod;
         public enum BrewMethod { Extract, PartialMash, AllGrain, Other}
